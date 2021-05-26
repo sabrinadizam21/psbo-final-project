@@ -19,9 +19,9 @@
                                 <span id="logo-name">SIK-POLI IPB</span>
                             </div>
                             <div id="user-menu">
-                                <li><a href="{{url('index')}}">Home</a></li>
+                                <li><a href="{{url('home')}}">Home</a></li>
                                 <li><a href="#">Rekam Medis</a></li>
-                                <li><a href="#">Jadwal Dokter</a></li>
+                                <li><a href="{{url('jadwal_dokter')}}">Jadwal Dokter</a></li>
                                 <li><a href="#">Konsultasi</a></li>
                             </div>  
                             <div id="profile-section">
