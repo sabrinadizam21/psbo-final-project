@@ -18,6 +18,11 @@ Route::get('/index', function () {
     return view('index');
 });
 
+/*Route::get('/konsultasi', function () {
+    return view('konsultasi');
+});
+*/
+
 Route::get('/jadwal_dokter', function () {
     return view('jadwal_dokter');
 });
