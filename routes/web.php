@@ -23,6 +23,10 @@ Route::get('/index', function () {
 });
 */
 
+Route::get('/rekam_medis', function () {
+    return view('rekam_medis');
+});
+
 Route::get('/jadwal_dokter', function () {
     return view('jadwal_dokter');
 });
