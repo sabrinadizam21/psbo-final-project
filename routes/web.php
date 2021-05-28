@@ -29,3 +29,10 @@ Route::get('/jadwal_dokter', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+// STAFF
+Route::view('/staff/dashboard','staff.dashboard-staff');
+Route::view('/staff/jadwal-dokter','staff.jadwal-dokter');
+Route::view('/staff/rekam-medis-daftar', 'staff.daftar-rekam-medis');
+Route::view('/staff/rekam-medis-tambah', 'staff.tambah-rekam-medis');
