@@ -26,7 +26,7 @@
                             </div>  
                             <div id="profile-section">
                                 <div class="profile-name">
-                                    <a href="#">HALO, Diza!</a>
+                                    <a href="/profil">{{ Auth::user()->name }}</a>
                                 </div>
                             </div> 
                         </div>
