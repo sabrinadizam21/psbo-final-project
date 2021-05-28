@@ -1,13 +1,8 @@
-
+:root {
+--bs-font-sans-serif: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
 #wrapper{font-family: tahoma;}
 
-.fixed-top {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-}
 
 /* Main Header Styling */
 .main-container{
@@ -27,7 +22,7 @@
 #logo{
     width: 25%;
     display: flex;
-    align-items: center;   
+    align-items: center;
 }
 #logo-name{
     color: #1F076C;
@@ -67,10 +62,13 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-}  
+}
 
 .profile-name{
     width: 100%;
+}
+.profile-name li{
+  list-style-type: none;
 }
 .profile-name a{
     display: block;
@@ -81,24 +79,20 @@
     text-decoration: none;
     transition: .3s;
     cursor: pointer;
-    
-    
+
+
     border-radius: 4px;
 }
 
 /*footer*/
-.container{
-    margin-bottom: 0%;
-    position: absolute;
-}
 #main-footer{
     width: 100%;
     height: 235px;
     background: #EC9353;
-    
+
     display: flex;
     justify-content: space-between;
-    
+    margin-top: 30%;
 }
 
 #rekam-medis{
@@ -161,7 +155,7 @@ details > summary::-webkit-details-marker{
     background-color: #FFFFFF;
 }
 .details-content{
-    
+
     background-color: #380890;
     font-size: 1rem;
     color: white;
@@ -184,8 +178,105 @@ details > summary::-webkit-details-marker{
   padding-bottom: 12px;
 }
 
+/*LOGIN STYLING*/
+.sikpoli-container{
+  position: absolute;
+  top: 18%;
+  left: 77.5%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0);
+  width: 420px;
+}
+.sikpoli-container h1{
+  font-size: 28;
+  font-family: Poppins;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+.login-logo{
+  width: 50px;
+  height: auto;
+  display: block;
+  margin-bottom: 28px;
+}
 
-/*WELCOME STYLING*/
-.profile-name li{
-    list-style: none;
+.form-container{
+  position: absolute;
+  top: 60%;
+  left: 77.5%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 360px;
+  padding: 30px 30px;
+}
+
+.form-container h1{
+  font-size: 28;
+  font-family: Poppins;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.control input{
+  position: relative;
+  width: 100%;
+  display: block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: rgba(255, 255, 255, 0.33);
+  color: black;
+  border: none;
+  outline: none;
+  margin-top: .3em;
+  margin-bottom: 1em;
+  font-size: 1.2em;
+}
+
+.control label{
+  font-size: 28;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.control button{
+  background-color: #F6B07D;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 2em;
+}
+
+/*WELCOME PAGE STYLING*/
+.welcome-container{
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: white;
+}
+
+.welcome-container h1{
+  font-size: 64px;
+  margin-top: 24px;
+}
+.welcome-container p{
+  font-weight: 100;
+  font-size: 24px;
+  margin: 20px auto;
+  line-height: 25px;
+}
+.welcome-container button{
+  width: 200px;
+  padding: 8px 0;
+  text-align: center;
+  margin: 10px 10px;
+  border-radius: 16px;
+  font-weight: bold;
+  border: 2px solid white;
+  background-color: #EC9353;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
 }

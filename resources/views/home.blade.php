@@ -31,25 +31,7 @@
 -->
 
 
-<div id="wrapper">
-                
-                <div class="container">
-                    
-                    <div id="main-footer">
-                        <div id="rekam-medis">
-                            <div>
-                            </div>
-                        </div>
-                        <div id="jadwal-dokter">
-                            
-                        </div>  
-                        <div id="konsultasi">
-                                
-                        </div> 
-                    </div>
-                </div>
-                </div>
-            </div>
+
 </body>
 
 @endsection
