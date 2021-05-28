@@ -17,7 +17,7 @@
             <div class="welcome-container">
               <h1>Selamat Datang</h1>
               <p>Sistem Informasi Rekam Medis dan Konsultasi Poliklinik IPB</p>
-              <form action="{{url('login')}}">
+              <form action="{{url('login-mahasiswa')}}">
                 <button type="submit">Login</button>
               </form>
             </div>

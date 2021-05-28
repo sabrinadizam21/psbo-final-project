@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">        
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style-konsultasi.css" />
+    <link rel="stylesheet" href="{{asset('css/style.css')}}" />
     <script src="js/bootstrap.min.js"></script>
 </head>
-
+@extends('layouts.master')
 <body>
+<!--  
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <img src="img/logo-ipb.png">           
+            <img src="{{asset('image/logo-ipb.png')}}">           
             <div class="navbar-brand">
                 SIK-POLI IPB
             </div>
@@ -29,13 +30,13 @@
                     <li class="nav-item"><a class="nav-link rounded" href="#jadwal-dokter">Jadwal Dokter</a></li>                   
                     <li class="nav-item"><a class="nav-link active rounded" href="#konsultasi">Konsultasi</a></li>
                     <buttton class="profile-name" type="button">
-                       <a href="#login">Halo, Diza!</a> 
+                       <a href="#login">{{ Auth::user()->name }}</a> 
                     </buttton>
                 </ul>
             </div>
         </div>
     </nav>
-
+-->
     <div class="page-section">
         <div class="container">
             <div class="chat">
@@ -43,7 +44,7 @@
                     <div class="kolom-kiri">
                         <div class="heading_kiri">
                             <button class="btn plus-button">
-                                <img src="img/plus.png">
+                                <img src="{{asset('image/plus.png')}}">
                             </button>
                             <button class=" btn new-conv">
                                 New Conversation

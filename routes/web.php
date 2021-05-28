@@ -18,10 +18,10 @@ Route::get('/index', function () {
     return view('index');
 });
 
-/*Route::get('/konsultasi', function () {
+Route::get('/konsultasi', function () {
     return view('konsultasi');
 });
-*/
+
 
 Route::get('/rekam_medis', function () {
     return view('rekam_medis');
@@ -30,9 +30,13 @@ Route::get('/rekam_medis', function () {
 Route::get('/jadwal_dokter', function () {
     return view('jadwal_dokter');
 });
+
+Route::get('/login-mahasiswa', function () {
+    return view('login-mahasiswa');
+});
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/login/admin', 'Auth\LoginController@showAdminLoginForm');
 Route::get('/login/dokter', 'Auth\LoginController@showDokterLoginForm');
