@@ -23,9 +23,27 @@ Route::get('/index', function () {
 });
 */
 
+Route::get('/rekam_medis', function () {
+    return view('rekam_medis');
+});
+
 Route::get('/jadwal_dokter', function () {
     return view('jadwal_dokter');
 });
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/login/admin', 'Auth\LoginController@showAdminLoginForm');
+Route::get('/login/dokter', 'Auth\LoginController@showDokterLoginForm');
+Route::get('/register/admin', 'Auth\RegisterController@showAdminRegisterForm');
+Route::get('/register/dokter', 'Auth\RegisterController@showDokterRegisterForm');
+    
+Route::post('/login/admin', 'Auth\LoginController@adminLogin');
+Route::post('/login/dokter', 'Auth\LoginController@dokterLogin');
+Route::post('/register/admin', 'Auth\RegisterController@createAdmin');
+Route::post('/register/dokter', 'Auth\RegisterController@createDokter');
+    
+Route::view('/home', 'home')->middleware('auth');
+Route::view('/admin', 'admin');
+Route::view('/dokter', 'dokter');
