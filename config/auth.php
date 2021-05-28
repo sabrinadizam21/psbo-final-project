@@ -13,6 +13,8 @@ return [
     |
     */
 
+    
+
     'defaults' => [
         'guard' => 'web',
         'passwords' => 'users',
@@ -46,6 +48,16 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admins',
+        ],
+
+        'dokter' => [
+            'driver' => 'session',
+            'provider' => 'dokters',
+        ],
     ],
 
     /*
@@ -75,6 +87,16 @@ return [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
+
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Admin::class,
+        ],
+        'dokters' => [
+            'driver' => 'eloquent',
+            'model' => App\Dokter::class,
+        ],
+
     ],
 
     /*

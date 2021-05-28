@@ -18,13 +18,21 @@ Route::get('/index', function () {
     return view('index');
 });
 
-/*Route::get('/konsultasi', function () {
+Route::get('/konsultasi', function () {
     return view('konsultasi');
 });
-*/
+
+
+Route::get('/rekam_medis', function () {
+    return view('rekam_medis');
+});
 
 Route::get('/jadwal_dokter', function () {
     return view('jadwal_dokter');
+});
+
+Route::get('/login-mahasiswa', function () {
+    return view('login-mahasiswa');
 });
 Auth::routes();
 
@@ -36,3 +44,18 @@ Route::view('/staff/dashboard','staff.dashboard-staff');
 Route::view('/staff/jadwal-dokter','staff.jadwal-dokter');
 Route::view('/staff/rekam-medis-daftar', 'staff.daftar-rekam-medis');
 Route::view('/staff/rekam-medis-tambah', 'staff.tambah-rekam-medis');
+
+Route::get('/login/admin', 'Auth\LoginController@showAdminLoginForm');
+Route::get('/login/dokter', 'Auth\LoginController@showDokterLoginForm');
+Route::get('/register/admin', 'Auth\RegisterController@showAdminRegisterForm');
+Route::get('/register/dokter', 'Auth\RegisterController@showDokterRegisterForm');
+    
+Route::post('/login/admin', 'Auth\LoginController@adminLogin');
+Route::post('/login/dokter', 'Auth\LoginController@dokterLogin');
+Route::post('/register/admin', 'Auth\RegisterController@createAdmin');
+Route::post('/register/dokter', 'Auth\RegisterController@createDokter');
+    
+Route::view('/home', 'home')->middleware('auth');
+Route::view('/admin', 'admin');
+Route::view('/dokter', 'dokter');
+

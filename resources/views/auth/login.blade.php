@@ -1,15 +1,26 @@
-@extends('layouts.app')
+<!DOCTYPE html>
 
-@section('content')
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>::SIK-POLI IPB::</title>
+        <link rel="stylesheet" href="{{asset('css/style.css')}}" type="text/css">
+       
+    </head>
+<!--
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div class="card-header">{{ isset($url) ? ucwords($url) : ""}} {{ __('Login') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
+                        @isset($url)
+                        <form method="POST" action='{{ url("login/$url") }}' aria-label="{{ __('Login') }}">
+                        @else
+                        <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">>
+                        @endisset
+                            @csrf
 
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
@@ -67,7 +78,43 @@
                     </form>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-@endsection
+        </section>
+    </body>
+-->
+    <body style = "background-image:url(/images/LOGIN.png);
+    background-size: cover;">
+        <section>
+            <div class="sikpoli-container">
+                <a class="login-logo" href="">
+                    <img src="/images/ipbsikpoliipb.png">
+                </a>
+                <h1>Sistem Informasi</h1>
+                <h1>Rekam Medis dan Konsultasi</h1>
+                <h1>Poliklinik IPB</h1>
+            </div>
+            <div class="form-container">
+                <h1>{{ isset($url) ? ucwords($url) : ""}} {{ __('Login') }}</h1>
+                    @isset($url)
+                        <form method="POST" action='{{ url("login/$url") }}' aria-label="{{ __('Login') }}">
+                        @else
+                        <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">>
+                        @endisset
+                    @csrf
+                    <div class="control">
+                        <label for="email">ID Pengguna</label>
+                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                    </div>
+                    <div class="control">
+                        <label for="password">Kata Sandi</label>
+                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                    </div>
+                    
+                    <button type="submit">
+                        Login
+                    </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </body>
+</html>

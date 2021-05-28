@@ -4,7 +4,7 @@
     <head>
         <meta charset = "UTF-8">
         <title>::SIK-POLI IPB::</title>
-        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="{{asset('css/style.css')}}" type="text/css">
         
     </head>
 
@@ -14,22 +14,7 @@
                 <div id="header">
                     
                     <div id="main-header">
-                        <div class="main-container">
-                            <div id="logo">
-                                <span id="logo-name">SIK-POLI IPB</span>
-                            </div>
-                            <div id="user-menu">
-                                <li><a href="{{url('home')}}">Home</a></li>
-                                <li><a href="#">Rekam Medis</a></li>
-                                <li><a href="{{url('jadwal_dokter')}}">Jadwal Dokter</a></li>
-                                <li><a href="#">Konsultasi</a></li>
-                            </div>  
-                            <div id="profile-section">
-                                <div class="profile-name">
-                                    <a href="#">HALO, Diza!</a>
-                                </div>
-                            </div> 
-                        </div>
+                        @extends('layouts.master')
                     </div>
                 </div>
             </div>
