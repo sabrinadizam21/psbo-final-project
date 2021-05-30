@@ -18,8 +18,8 @@
 	<!-- GOOGLE FONTS -->
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
 	<!-- ICONS -->
-	<link rel="apple-touch-icon" sizes="76x76" href="{{asset('assets/img/apple-icon.png')}}">
-	<link rel="icon" type="image/png" sizes="96x96" href="{{asset('assets/img/favicon.png')}}">
+	<link rel="apple-touch-icon" sizes="76x96" href="{{asset('images/logo-ipb.png')}}">
+	<link rel="icon" type="image/png" sizes="76x96" href="{{asset('images/logo-ipb.png')}}">
 </head>
 
 <body>
@@ -27,8 +27,8 @@
 	<div id="wrapper">
 		<!-- NAVBAR -->
 		<nav class="navbar navbar-default navbar-fixed-top">
-			<div class="brand">
-				<a href="index.html"><img src="{{asset('assets/img/logo-dark.png')}}" alt="Klorofil Logo" class="img-responsive logo"></a>
+			<div class="brand" style="padding: 14px 0px 14px 15px;">
+				<a href="{{url('/staff/dashboard')}}"><img src="{{asset('images/ipbsikpoliipb-biru.png')}}" alt="SIKPOLI Logo" width="70%"></a>
 			</div>
 			<div class="container-fluid">
 				<div class="navbar-btn">
@@ -79,6 +79,7 @@
 					<div class="panel panel-headline">
 						<div class="panel-heading">
 							<h3 class="panel-title">@yield('title-content')</h3>
+							<p class="panel-subtitle">@yield('subtitle-content')</p>
 						</div>
 						<div class="panel-body">
 							@yield('main-content')
