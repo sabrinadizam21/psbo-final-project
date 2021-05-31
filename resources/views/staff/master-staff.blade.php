@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Dashboard | Admin SIK-POLI</title>
+	<title>SIK-POLI IPB</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -38,10 +38,13 @@
 				<div id="navbar-menu">
 					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="{{asset('assets/img/user.png')}}" class="img-circle" alt="Avatar"> <span>Samuel</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span>{{ Auth::guard('admin')->user()->name }}</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
 							<ul class="dropdown-menu">
-								<li><a href="#"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
-								<li><a href="#"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
+								<li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="lnr lnr-exit" ></i> <span>{{ __('Logout') }}</span></a>
+									<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+										@csrf
+									</form>
+								</li>
 							</ul>
 						</li>
 					</ul>
@@ -54,16 +57,10 @@
 			<div class="sidebar-scroll">
 				<nav>
 					<ul class="nav">
-						<li><a href="{{url('/staff/dashboard')}}" class="@yield('active-d')"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
-						<li><a href="{{url('/staff/jadwal-dokter')}}" class="@yield('active-jd')"><i class="fa fa-calendar"></i> <span>Jadwal Dokter</span></a></li>
+						<li><a href="{{url('/admin/dashboard')}}" class="@yield('active-d')"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+						<li><a href="{{url('/admin/jadwal-dokter')}}" class="@yield('active-jd')"><i class="fa fa-calendar"></i> <span>Jadwal Dokter</span></a></li>
 						<li>
-							<a href="#subPages" data-toggle="collapse" class="collapsed @yield('active-rm')"><i class="lnr lnr-file-empty"></i> <span>Rekam Medis</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
-							<div id="subPages" class="collapse in">
-								<ul class="nav">
-									<li><a href="{{url('/staff/rekam-medis-daftar')}}" class="@yield('active-rm-1')">Daftar Rekam Medis</a></li>
-									<li><a href="{{url('/staff/rekam-medis-tambah')}}" class="@yield('active-rm-2')">Tambah Rekam Medis</a></li>
-								</ul>
-							</div>
+							<a href="{{url('/admin/rekam-medis')}}" class="@yield('active-rm-1')"><i class="lnr lnr-file-empty"></i> <span>Rekam Medis</span></a>
 						</li>
 					</ul>
 				</nav>

@@ -40,10 +40,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 // STAFF
-Route::view('/staff/dashboard','staff.dashboard-staff');
-Route::view('/staff/jadwal-dokter','staff.jadwal-dokter');
-Route::view('/staff/rekam-medis-daftar', 'staff.daftar-rekam-medis');
-Route::view('/staff/rekam-medis-tambah', 'staff.tambah-rekam-medis');
+Route::prefix('admin')->group(function(){
+	Route::view('/dashboard','staff.dashboard-staff');
+	Route::view('/jadwal-dokter','staff.jadwal-dokter');
+	Route::view('/rekam-medis', 'staff.daftar-rekam-medis');
+	Route::view('/rekam-medis/individu', 'staff.rekam-medis-individu');
+	Route::view('/rekam-medis-tambah', 'staff.tambah-rekam-medis');
+});
+
 
 Route::get('/login/admin', 'Auth\LoginController@showAdminLoginForm');
 Route::get('/login/dokter', 'Auth\LoginController@showDokterLoginForm');
@@ -56,6 +60,6 @@ Route::post('/register/admin', 'Auth\RegisterController@createAdmin');
 Route::post('/register/dokter', 'Auth\RegisterController@createDokter');
     
 Route::view('/home', 'home')->middleware('auth');
-Route::view('/admin', 'admin');
+//Route::view('/admin', 'staff.dashboard-staff');
 Route::view('/dokter', 'dokter');
 

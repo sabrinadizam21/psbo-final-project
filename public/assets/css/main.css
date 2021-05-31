@@ -32,7 +32,9 @@ a {
     text-decoration: none; }
 
 th {
-  font-weight: 600; }
+  font-weight: 600; 
+  text-align: center;
+}
 
 .page-title {
   margin-top: 0;
@@ -1141,15 +1143,19 @@ ul.activity-list > li {
 .profile-left {
   padding-left: 0;
   float: left;
-  width: 35%;
+  /*width: 35%;*/
+  width: 27%;
   height: 100%;
-  position: absolute;
+  position: static;
+  /*position: absolute;*/
   background-color: #F8F8F8; }
 
 .profile-right {
   float: right;
-  width: 65%;
-  padding: 20px 25px; }
+  /*width: 65%;*/
+  width: 70%;
+  padding-bottom: 20px;
+  /*padding: 20px 25px;*/ }
   .profile-right .heading {
     margin-top: 0; }
 
@@ -1765,5 +1771,10 @@ ul.activity-timeline > li {
 .padding-left5{
   padding-left: 5px !important;
   text-align: center;
+}
+
+ td {
+  text-align: center;
+  vertical-align: middle !important;
 }
 /*# sourceMappingURL=main.css.map */
