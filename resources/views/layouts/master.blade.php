@@ -11,16 +11,18 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-
+    
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Styles -->
     <link rel="preconnect" href="https://fonts.gstatic.com">        
-    
     <link rel="stylesheet" href="{{asset('css/style.css')}}" />
-    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
 </head>
 <!--
 <body>
@@ -84,41 +86,47 @@
 -->
 
 <body>
+    
     <div id="app">
         <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <img src="{{asset('.image/logo-ipb.png')}}">           
+            <img src="{{url('/images/logo-ipb.png')}}"/>        
             <div class="navbar-brand">
-                SIK-POLI IPB
+                <a>SIK-POLI IPB</a>
             </div>
-            <button class="navbar-toggler rounded " type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <a>MENU</a>
-                <i class="fas fa-bars"></i>
+         
+            <button class="navbar-toggler rounded " type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
             </button>
+  
 
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link rounded" href="{{url('home')}}">Home</a></li>
-                    <li class="nav-item"><a class="nav-link rounded" href="#rekam-medis">Rekam Medis</a></li>
-                    <li class="nav-item"><a class="nav-link rounded" href="{{url('jadwal_dokter')}}">Jadwal Dokter</a></li>                   
+                    <li class="nav-item"><a class="nav-link rounded" href="{{url('rekam-medis')}}">Rekam Medis</a></li>
+                    <li class="nav-item"><a class="nav-link rounded" href="{{url('jadwal-dokter')}}">Jadwal Dokter</a></li>                   
                     <li class="nav-item"><a class="nav-link rounded" href="{{url('konsultasi')}}">Konsultasi</a></li>
-                    <buttton class="profile-name" type="button">
-                       <a href="#login">{{ Auth::user()->name }}</a> 
-                       
-                    </buttton>
-                    <button>
-                        <a href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                                document.getElementById('logout-form').submit();">
-                                                    {{ __('Logout') }}>logout</a>
-                                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                                    @csrf
-                                                </form>
-
-                    </button>
                     
-
+                    <li class ="nav-item">
+                        <div class="collapsible" type="button" data-toggle="collapse" data-target="#logout" aria-expanded="false" aria-controls="collapseExample">
+                                <a>Halo {{ Auth::user()->name }}!</span> <i class="fas fa-bars"></i></a>
+                        </div>
+                        <div class="collapse" id="logout">
+                                <div class="content segitiga">
+                                
+                                    <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                                        document.getElementById('logout-form').submit();">
+                                        <span  class="fa fa-sign-out"></span>{{ __('Logout') }}</a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                            @csrf
+                                    </form>
+                                </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
+                
+            
         </div>
         </nav>
         <!--
@@ -178,8 +186,16 @@
        <main class="py-4">
             @yield('content')
         </main>
-        
     </div>
+    <script>
+        $(document).ready(function() {
+        $("a .nav-link .rounded").click(function () {
+            $(this).addClass("active");
+            $("a .nav-link .rounded").not(this).removeClass("active");
+        });
+
+        });
+    </script>
 </body>
 
 </html>

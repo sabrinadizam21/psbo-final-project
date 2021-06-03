@@ -23,12 +23,12 @@ Route::get('/konsultasi', function () {
 });
 
 
-Route::get('/rekam_medis', function () {
-    return view('rekam_medis');
+Route::get('/rekam-medis', function () {
+    return view('rekam-medis');
 });
 
-Route::get('/jadwal_dokter', function () {
-    return view('jadwal_dokter');
+Route::get('/jadwal-dokter', function () {
+    return view('jadwal-dokter');
 });
 
 Route::get('/login-mahasiswa', function () {
@@ -62,4 +62,10 @@ Route::post('/register/dokter', 'Auth\RegisterController@createDokter');
 Route::view('/home', 'home')->middleware('auth');
 //Route::view('/admin', 'staff.dashboard-staff');
 Route::view('/dokter', 'dokter');
+
+// REKAM MEDIS
+Route::prefix('rekam-medis')->group(function(){
+	Route::view('/individu', 'rekam-medis-individu');
+});
+
 

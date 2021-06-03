@@ -1,11 +1,9 @@
+<!doctype html><html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    
 @extends('layouts.master')
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
 @section('content')
 <body style = "background-image:url(./images/bg.png);
     background-color: #1F076C;">
-
 
             
 <!--
