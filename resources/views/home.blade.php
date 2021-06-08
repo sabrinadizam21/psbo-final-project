@@ -1,7 +1,6 @@
+<!doctype html><html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    
 @extends('layouts.master')
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
 @section('content')
 <style>
     .popup.active .content{
@@ -11,7 +10,6 @@
 </style>
 <body style = "background-image:url(./images/bg.png);
     background-color: #1F076C;">
-
 
 <!--
 <div class="popup" id = popup-1>

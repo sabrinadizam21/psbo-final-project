@@ -1,20 +1,22 @@
-<!DOCTYPE html>
+<!DOCTYPE html><html class=''>
+<head>
+    <title>::Jadwal Dokter::</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">        
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}" />
+</head>
 
-<html lang = "en">
-    <head>
-        <meta charset = "UTF-8">
-        <title>::SIK-POLI IPB::</title>
-        <link rel="stylesheet" href="{{asset('css/style.css')}}" type="text/css">
-        
-    </head>
-
-    <body style="background-color: #D8C9FF;">
+ @extends('layouts.master')
+<body style="background-color: #D8C9FF;">
         <section>
             <div id="wrapper">
                 <div id="header">
                     
                     <div id="main-header">
-                        @extends('layouts.master')
+                        
                     </div>
                 </div>
             </div>

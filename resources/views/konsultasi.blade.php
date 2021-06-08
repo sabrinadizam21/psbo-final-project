@@ -7,10 +7,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">        
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/style.css')}}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
     <script src="js/bootstrap.min.js"></script>
 </head>
-@extends('layouts.master')
 <body>
+    
+@extends('layouts.master')
 <!--  
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
@@ -44,34 +48,34 @@
                     <div class="kolom-kiri">
                         <div class="heading_kiri">
                             <button class="btn plus-button">
-                                <img src="{{asset('image/plus.png')}}">
+                                <i class="fa fa-plus"> </i>    
                             </button>
                             <button class=" btn new-conv">
                                 New Conversation
                             </button>
                         </div>
                         <div class="box-listchat"> 
-                            <div class="list-chat active-chat">
+                            <div class="list-chat">
                                 <div class="kontak">
                                     <div class="profil">
-                                        <img src="img/profil.png">
+                                    <img src="{{url('/images/profil.png')}}"/>        
                                     </div>                         
                                     <div class="informasi">
                                         <h5>Dr. Laszlo Kreizler</h5>
-                                        <p>Lorem Ipsum</p>
+                                        <p>You: Lorem Ipsum</p>
                                     </div>
                             
                                 </div>
                             </div>
 
-                            <div class="list-chat">
+                            <div class="list-chat active-chat">
                                 <div class="kontak">
                                     <div class="profil">
-                                        <img src="img/profil.png">
+                                    <img src="{{url('/images/profil.png')}}"/>        
                                     </div>                         
                                     <div class="informasi aktif">
                                         <h5>Dr. Alwi</h5>
-                                        <p>Lorem Ipsum</p>
+                                        <p>You: Lorem Ipsum</p>
                                     </div>
 
                                 </div>
@@ -83,7 +87,7 @@
                         <div class="heading-kanan">
                             <div class="heading-profil">
                                 <div class="profil">
-                                    <img src="img/profil.png">
+                                <img src="{{url('/images/profil.png')}}"/>        
                                 </div> 
                             </div>                     
                             <div class="informasi">
@@ -91,13 +95,13 @@
                                 <p>Lorem Ipsum</p>
                             </div>
                             <button class="btn setting-button" type="button">
-                                <img src="img/setting.png">
+                                <i class="fa fa-ellipsis-v"> </i>       
                             </button>
                         </div>
                         <div class="isi-msg">
                             <lu>
                                 <li class="dokter-msg">
-                                    <p>Lorem ipsum dolor sit amet. </p>
+                                    <p>Lorem ipsum dolor sit amet. cont adipiscing elit sed do eiusmod tempor. cont adipiscing elit sed do eiusmod tempor. </p>
                                     <span class="time_date"> 11:01 AM</span>                                
                                 </li>
     
@@ -112,20 +116,20 @@
                                 </li>
     
                                 <li class="mhs-msg">
-                                    <p>Lorem ipsum dolor sit amet, cont adipiscing elit sed do eiusmod tempor. Lorem ipsum dolor sit amet, cont elit sed do euismod tempor.</p>
+                                    <p>Lorem ipsum dolor sit amet, cont adipiscing elit sed do eiusmod tempor.</p>
                                     <span class="time_date sender"> 11:01 AM</span>
                                 </li>
-    
-                                <li class="mhs-msg">
-                                    <p>Lorem ipsum dolor sit amet, cont adipiscing elit sed do eiusmod.</p>
-                                    <span class="time_date sender"> 11:01 AM</span>
+
+                                <li div class="dokter-msg">                                                             
+                                    <p>Lorem ipsum dolor sit amet, cont adipiscing elit sed do eiusmod tempor. </p>
+                                    <span class="time_date"> 11:01 AM</span>                                
                                 </li>
                             </lu>
                             
                         </div>
                         <div class="kotak-tulis">
                             <button class="btn input-gambar" type="button">
-                                <img src="img/cam.png">
+                                <i class="fa fa-camera"> </i>          
                             </button>
                             <form id="send-message">
                                 <div class="type-msg">
@@ -134,7 +138,7 @@
                                     </div>
                                 </div>
                                 <button class="btn send-button" type="submit">
-                                    <img src="img/send.png">
+                                    <i class="fa fa-send"> </i>        
                                 </button>
                             </form> 
     
@@ -143,11 +147,7 @@
             </div>
         </div>
     </div>  
-    <script 
-        src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script><script src='https://code.jquery.com/jquery-2.2.4.min.js'>
-    </script>
     <script >$(".isi-msg").animate({ scrollTop: $(document).height() }, "fast");
- 
         function newMessage() {
             message = $(".input-msg input").val();
             if($.trim(message) == '') {
@@ -155,7 +155,7 @@
             }
             $('<li class="mhs-msg"><p>' + message + '</p></li>').appendTo($('.isi-msg'));
             $('.input-msg input').val(null);
-            $('.aktif').html('<h5>Dr. Alwi</h5><p>' + message + '</p>');
+            $('.aktif').html('<h5>Dr. Alwi</h5><p>You: ' + message + '</p>');
             $(".isi-msg").animate({ scrollTop: $(document).height() }, "fast");
         };
 
@@ -171,6 +171,13 @@
         }
         });
 
+        $(document).ready(function() {
+        $(".list-chat").click(function () {
+            $(this).addClass("active-chat");
+            $(".list-chat").not(this).removeClass("active-chat");
+        });
+
+        });
     </script>
 
 </body>
