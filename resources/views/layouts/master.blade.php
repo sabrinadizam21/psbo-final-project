@@ -19,10 +19,7 @@
 
     <!-- Styles -->
     <link rel="preconnect" href="https://fonts.gstatic.com">        
-<<<<<<< HEAD
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-=======
->>>>>>> 5446fce14c2f9b24ea410796dd950683a31b0789
     <link rel="stylesheet" href="{{asset('css/style.css')}}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
@@ -110,14 +107,15 @@
                     <li class="nav-item"><a class="nav-link rounded" href="{{url('rekam-medis')}}">Rekam Medis</a></li>
                     <li class="nav-item"><a class="nav-link rounded" href="{{url('jadwal-dokter')}}">Jadwal Dokter</a></li>                   
                     <li class="nav-item"><a class="nav-link rounded" href="{{url('konsultasi')}}">Konsultasi</a></li>
+                    <!--
                     <buttton class="profile-name" type="button" data-toggle="modal" data-target="#contohModal">
                        <a href="#login">{{ Auth::user()->name }}</a>    
                     </buttton>
-                    
+                    -->
                     
                     <li class ="nav-item">
                         <div class="collapsible" type="button" data-toggle="collapse" data-target="#logout" aria-expanded="false" aria-controls="collapseExample">
-                                <a>Halo {{ Auth::user()->name }}!</span> <i class="fas fa-bars"></i></a>
+                                <a style = "color: white;">{{ Auth::user()->name }}<!--<span class="fas fa-bars"></span>--></a>
                         </div>
                         <div class="collapse" id="logout">
                                 <div class="content segitiga">
