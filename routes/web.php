@@ -34,6 +34,10 @@ Route::get('/jadwal-dokter', function () {
 Route::get('/login-mahasiswa', function () {
     return view('login-mahasiswa');
 });
+
+Route::get('/rekam-medis-inputid', function () {
+    return view('rekam-medis-inputid');
+});
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -67,5 +71,7 @@ Route::view('/dokter', 'dokter');
 Route::prefix('rekam-medis')->group(function(){
 	Route::view('/individu', 'rekam-medis-individu');
 });
+
+
 
 
