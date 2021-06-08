@@ -18,7 +18,7 @@
 
     <!-- Styles -->
     <link rel="preconnect" href="https://fonts.gstatic.com">        
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('css/style.css')}}" />
     <script src="js/bootstrap.min.js"></script>
 </head>
@@ -102,19 +102,10 @@
                     <li class="nav-item"><a class="nav-link rounded" href="#rekam-medis">Rekam Medis</a></li>
                     <li class="nav-item"><a class="nav-link rounded" href="{{url('jadwal_dokter')}}">Jadwal Dokter</a></li>                   
                     <li class="nav-item"><a class="nav-link rounded" href="{{url('konsultasi')}}">Konsultasi</a></li>
-                    <buttton class="profile-name" type="button">
-                       <a href="#login">{{ Auth::user()->name }}</a> 
-                       
+                    <buttton class="profile-name" type="button" data-toggle="modal" data-target="#contohModal">
+                       <a href="#login">{{ Auth::user()->name }}</a>    
                     </buttton>
-                    <button>
-                        <a href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                                document.getElementById('logout-form').submit();">
-                                                    {{ __('Logout') }}>logout</a>
-                                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                                    @csrf
-                                                </form>
-
-                    </button>
+                    
                     
 
                 </ul>
@@ -180,6 +171,34 @@
         </main>
         
     </div>
+    <div class="modal fade" id="contohModal" role="dialog" arialabelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Logout</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+                    
+                        <button>
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                                document.getElementById('logout-form').submit();">
+                                                    {{ __('Logout') }}</a>
+                                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                    @csrf
+                                                </form>
+
+                    </button>
+                    
+                    
+                
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 
 </html>
