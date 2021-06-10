@@ -23,9 +23,6 @@ Route::get('/konsultasi', function () {
 });
 
 
-Route::get('/rekam-medis', function () {
-    return view('rekam-medis');
-});
 
 Route::get('/jadwal-dokter', function () {
     return view('jadwal-dokter');
@@ -42,6 +39,15 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/rekam-medis', 'RekamMedisController@rekammedis');
+
+Route::post('/rekam-medis/create', 'RekamMedisController@rekammediscreate');
+
+Route::get('/rekam-medis/{id}/edit', 'RekamMedisController@rekammedisedit');
+
+Route::post('/rekam-medis/{id}/update', 'RekamMedisController@rekammedisupdate');
+
+Route::get('/rekam-medis/{id}/delete', 'RekamMedisController@rekammedisdelete');
 
 // STAFF
 Route::prefix('admin')->group(function(){
@@ -71,6 +77,7 @@ Route::view('/dokter', 'dokter');
 Route::prefix('rekam-medis')->group(function(){
 	Route::view('/individu', 'rekam-medis-individu');
 });
+
 
 
 
