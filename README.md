@@ -1,78 +1,97 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+# SIK-POLI : Sistem Informasi Rekam Medis dan Konsultasi pada Poliklinik IPB (Paralel 1 Kelompok 9) 
 
-## About Laravel
+<table align="center">
+<thead>
+<tr>
+<th align="center"><a href="#deskripsi-singkat-aplikasi">Deskripsi</a></th>
+<th align="center"><a href="#user-analysis">User Analisis</a></th>
+<th align="center"><a href="#spesifikasi-teknis-lingkungan-pengembangan">Spesifikasi</a></th>
+<th align="center"><a href="#konsep-oop-yang-digunakan">Konsep OOP</a></th>
+<th align="center"><a href="#tipe-desain-pengembangan-yang-digunakan">Tipe Desain</a></th>
+<th align="center"><a href="#hasil-dan-pembahasan">Hasil dan Pembahasan</a></th>
+<th align="center"><a href="#hasil-implementasi">Hasil Implementasi</a></th>
+<th align="center"><a href="#saran-untuk-pengembangan-selanjutnya">Saran</a></th>
+<th align="center"><a href="#developer-dan-job-desc">Developer</a></th>
+</tr>
+</thead>
+</table align="center">
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Deskripsi Singkat Aplikasi 
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+SIK-POLI merupakan aplikasi untuk Poliklinik IPB berbasis website yang bertujuan untuk mempermudah mahasiswa IPB dalam menggunakan fasilitas Poliklinik IPB dalam akses online. Fitur pelayanan yang tersedia, seperti:
+- Konsultasi online dengan dokter Poliklinik untuk membantu mahasiswa yang mengalami masalah kesehatan dalam jarak jauh, sehingga BPJS yang terdaftar di Poliklinik masih tetap dapat digunakan.
+- Tersedia pula rekam medis mahasiswa selama berobat di Poliklinik untuk memantau kesehatan mahasiswa dalam sebulan/setahun terakhir. 
+- Mahasiswa pun juga dipermudah dengan adanya jadwal dokter yang tersedia di website SIK-POLI sehingga mahasiswa dapat melakukan kunjungan ke Poliklinik sesuai jadwal dokter yang ada.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## User Analysis
 
-## Learning Laravel
+### User Story
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- Sebagai mahasiswa IPB, saya ingin mendapatkan data rekam medis saya selama berobat di Poliklinik IPB untuk keperluan berobat di rumah sakit lain.
+- Sebagai mahasiswa IPB, saya membutuhkan transparansi jadwal praktek dokter dan pelayanannya agar memudahkan saya dalam menentukan jadwal konsultasi.
+- Sebagai mahasiswa IPB, saya ingin memanfaatkan BPJS saya yang sudah terdaftar di Poliklinik IPB agar saya tidak perlu konsultasi di rumah sakit lain selama pandemi ini.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Spesifikasi Teknis Lingkungan Pengembangan
 
-## Laravel Sponsors
+### Software
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+![Frame 1 (2)](https://user-images.githubusercontent.com/60166588/121624589-00ad5300-ca9c-11eb-99a4-ef314184684b.png)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
+### Hardware
+### Tech Stack
 
-## Contributing
+## Konsep OOP yang digunakan
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Tipe Desain Pengembangan yang Digunakan
 
-## Code of Conduct
+## Hasil dan Pembahasan
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Use Case Diagram
+![Diagram Kelompok 9-Use Case](https://user-images.githubusercontent.com/60166588/121620205-1ae33300-ca94-11eb-8092-3a97bb74a0ad.png)
 
-## Security Vulnerabilities
+### Activity Diagram
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+#### Melihat Rekam Medis atau Jadwal Dokter
+![Diagram Kelompok 9-AD 1 - melihat rekam medis](https://user-images.githubusercontent.com/60166588/121620404-77dee900-ca94-11eb-8d2f-30ff19fabc53.png)
 
-## License
+#### Menambah Jadwal Dokter
+![Diagram Kelompok 9-AD 2 - menambah jadwal](https://user-images.githubusercontent.com/60166588/121620518-aeb4ff00-ca94-11eb-836e-d3012f82ad93.png)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+#### Menghapus Jadwal Dokter
+![Diagram Kelompok 9-AD 3 - menghapus jadwal](https://user-images.githubusercontent.com/60166588/121620630-de640700-ca94-11eb-8840-c0037ec47985.png)
+
+#### Mengupdate Jadwal Dokter
+![Diagram Kelompok 9-AD 4 - mengubah jadwal](https://user-images.githubusercontent.com/60166588/121620705-fc316c00-ca94-11eb-8a6d-23cdbadae2da.png)
+
+#### Mengupdate Rekam Medis
+![update rekam medis](https://user-images.githubusercontent.com/60166588/121625901-9518b500-ca9e-11eb-90b0-2d1c6cb16183.png)
+
+### Class Diagram
+![class diagram](https://user-images.githubusercontent.com/60166588/121625989-c1cccc80-ca9e-11eb-95be-12a12c0d4d8a.png)
+
+
+### Entity Relationship Diagram
+### Arsitektur Sistem
+### Fungsi Utama yang Dikembangkan
+### Fungsi CRUD
+
+## Hasil Implementasi
+
+### Screenshoot Sistem
+### Link Aplikasi
+
+## Saran untuk Pengembangan Selanjutnya
+
+## Developer dan Job Desc
+
+| NIM      | NAMA                           | JOB DESC  |
+| ----------| ------------------------------| --------- |
+| G64180029 | Sabrina Diza Melinda          |           |
+| G64180030 | Zahra Aulia Firdausi          |           |
+| G64180053 | Putri Melanita Londong Bua    |           |
+| G64180062 | Syukriyatul Hanifa            |           |
+| G64180077 | Alwi Miftahul Karomi          |           |
+
+
+
