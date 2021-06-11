@@ -52,9 +52,8 @@
 						<table class="table table-striped">
 							<thead>
 								<tr>
-									<th width="10%">Waktu Periksa</th>
-									<th>Anamnesa & Diagnosa</th>
-									<th>Therapie</th>
+									<th>Tanggal</th>
+									<th>Keluhan</th>
 									<th>Dokter</th>
 									<th>Aksi</th>
 								</tr>
@@ -63,14 +62,18 @@
 								<tr>
 									<td>16/9/2020 09:08:00</td>
 									<td>Pemeriksaan</td>
-									<td>Pemeriksaan</td>
 									<td>Dr. A, S.Komp.</td>
-									<td><button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#exampleModal">Edit</button><button type="button" class="btn btn-danger btn-xs">Hapus</button></td>
+									<td>
+										<a href="{{url('/admin/rekam-medis-edit')}}" type="button" class="btn btn-warning btn-xs">Edit</a>	
+										<!-- <button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#exampleModal">Edit</button> -->
+										<button type="button" class="btn btn-danger btn-xs">Hapus</button>
+										<a href="{{url('/admin/rekam-medis-tambah')}}" type="button" class="btn btn-primary btn-xs">Lihat</a>									
+									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-					<div class="margin-top-30 text-center"><a href="#" class="btn btn-default">Tambah</a></div>
+					<div class="margin-top-30 text-center"><a href="{{url('/admin/rekam-medis-tambah')}}" class="btn btn-default">Tambah</a></div>
 					
 				</div>
 				<!-- End Hasil Periksa -->
@@ -101,41 +104,6 @@
 			<!-- END TABBED CONTENT -->
 		</div>
 		<!-- END REKAM MEDIS -->
-		<!--START EDIT-->
-		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-						<h3 class="modal-title" id="exampleModalLabel">Edit</h3>
-					</div>
-					<div class="modal-body">
-						<!-- INPUTS -->
-						<div>
-							<label><h4>Waktu Periksa</h4></label>
-							<input type="text" class="form-control" placeholder="Waktu Periksa">
-							<br>
-							<label><h4>Anamnesa & Diagnosa</h4></label>
-							<input type="text" class="form-control" placeholder="Anamnesa & Diagnosa">
-							<br>
-							<label><h4>Therapie</h4></label>
-							<input type="text" class="form-control" placeholder="Therapie">
-							<br>
-							<label><h4>Dokter</h4></label>
-							<input type="text" class="form-control" placeholder="Dokter">
-						</div>				
-						<!-- END INPUTS -->
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-primary">Simpan</button>
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-					</div>
-				</div>
-			</div>
-		</div>
-<!--END EDIT-->
 	</div>
 </div>
 @endsection

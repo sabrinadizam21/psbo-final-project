@@ -1,6 +1,6 @@
 @extends('staff.master-staff')
 
-@section('active-rm') active @endsection
+@section('active-rm-1') active @endsection
 
 @section('title-content') Daftar Rekam Medis
 <form class="navbar panel-body" style="width: 40%; float: right;">

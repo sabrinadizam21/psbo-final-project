@@ -2,11 +2,12 @@
 
 @section('active-rm-1') active @endsection
 
-@section('active-rm-2') active @endsection
+@section('title-content') Rekam Medis @endsection
 
-@section('title-content') Tambah Rekam Medis @endsection
+@section('subtitle-content') Nama @endsection
 
 @section('main-content')
+<!--START EDIT-->
 <div>
 	<label><h4>Tanggal</h4></label>
 	<input type="text" class="form-control" placeholder="Tanggal">
@@ -56,4 +57,5 @@
 <div class="modal-footer">
 	<button type="button" class="btn btn-primary">Simpan</button>
 </div>
+<!--END EDIT-->
 @endsection

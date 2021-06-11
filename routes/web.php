@@ -56,6 +56,7 @@ Route::prefix('admin')->group(function(){
 	Route::view('/rekam-medis', 'staff.daftar-rekam-medis');
 	Route::view('/rekam-medis/individu', 'staff.rekam-medis-individu');
 	Route::view('/rekam-medis-tambah', 'staff.tambah-rekam-medis');
+	Route::view('/rekam-medis-edit', 'staff.edit-rekam-medis');
 });
 
 
