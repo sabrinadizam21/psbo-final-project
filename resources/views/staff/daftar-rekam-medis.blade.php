@@ -19,6 +19,7 @@
 	<table class="table table-striped">
 		<thead>
 			<tr>
+				<th>ID</th>
 				<th width="25%" style="text-align: left;">Nama</th>
 				<th class="text-center">NIM</th>
 				<th class="text-center">Umur</th>
@@ -29,6 +30,7 @@
 		</thead>
 		<tbody>
 			<tr>
+				<td>001</td>
 				<td style="text-align: left;">Steve</td>
 				<td>763648</td>
 				<td>76</td>
@@ -37,6 +39,7 @@
 				<td><div class="col-md-6 text-center"><a href="{{url('/admin/rekam-medis/individu')}}" class="btn btn-info btn-sm"><span class="fa fa-search" ></span></a></div></td>
 			</tr>
 			<tr>
+				<td>002</td>
 				<td style="text-align: left;">Jobs</td>
 				<td>763648</td>
 				<td>76</td>
