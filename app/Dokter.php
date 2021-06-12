@@ -15,10 +15,15 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
         protected $guard = 'dokter';
     
         protected $fillable = [
-            'name', 'email', 'password',
+            'name', 'email', 'password', 'id_jadwal'
         ];
     
         protected $hidden = [
             'password', 'remember_token',
         ];
+
+        public function jadwal()
+        {
+            return $this->belongsTo('\App\JadwalDokter','id_jadwal');
+        }
     }

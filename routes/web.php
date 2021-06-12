@@ -51,12 +51,18 @@ Route::get('/rekam-medis/{id}/delete', 'RekamMedisController@rekammedisdelete');
 
 // STAFF
 Route::prefix('admin')->group(function(){
-	Route::view('/dashboard','staff.dashboard-staff');
-	Route::view('/jadwal-dokter','staff.jadwal-dokter');
-	Route::view('/rekam-medis', 'staff.daftar-rekam-medis');
-	Route::view('/rekam-medis/individu', 'staff.rekam-medis-individu');
-	Route::view('/rekam-medis-tambah', 'staff.tambah-rekam-medis');
-	Route::view('/rekam-medis-edit', 'staff.edit-rekam-medis');
+	Route::get('/dashboard','StaffController@dashboard');
+	Route::get('/jadwal-dokter','StaffController@jadwal_dokter');
+	Route::get('/rekam-medis', 'StaffController@rekam_medis_daftar');
+	Route::get('/rekam-medis/individu', 'StaffController@rekam_medis_individu');
+	Route::get('/rekam-medis-tambah', 'StaffController@rekam_medis_tambah');
+	Route::get('/rekam-medis-edit', 'StaffController@rekam_medis_edit');
+	Route::get('/jadwal-dokter/tambah','StaffController@jadwal_dokter_tambah');
+	Route::post('/jadwal-dokter/create','StaffController@jadwal_dokter_create');
+	Route::get('/jadwal-dokter/{id}/edit','StaffController@jadwal_dokter_edit');
+	Route::post('/jadwal-dokter/{id}/update','StaffController@jadwal_dokter_update');
+	Route::get('/jadwal-dokter/{id}/delete','StaffController@jadwal_dokter_delete');
+
 });
 
 

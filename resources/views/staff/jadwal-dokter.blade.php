@@ -14,6 +14,13 @@
 @section('subtitle-content') Poliklinik IPB @endsection
 
 @section('main-content')
+@if(session('sukses'))
+<div class="alert alert-success alert-dismissible" role="alert">
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	<i class="fa fa-check-circle"></i> {{session('sukses')}}
+</div>
+@endif
+<a href="{{url('/admin/jadwal-dokter/tambah')}}" class="btn btn-default" type="button"><i class="fa fa-plus-square"></i> Tambah </a>
 <!--START TABLE-->
 <table class="table table-condensed">
 	<thead>
@@ -26,110 +33,54 @@
 	</thead>
 	<tbody>
 		<!--START ONE ROW-->
+		@foreach($jadwal_dokter as $jd)
 		<tr class="text-center">
-			<td rowspan="5">Dr. A, S.Komp</td>
-			<td rowspan="5">Poli Gigi</td>
+			<td rowspan="5">{{$jd->dokter_users->name}}</td>
+			<td rowspan="5">{{$jd->dokter_users->poli}}</td>
 			<td class="padding-left5">Senin</td>
-			<td class="padding-left5">10.00 - 14.00 WIB</td>
+			<td class="padding-left5">{{$jd->senin}}</td>
 			<td rowspan="5">
-				<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">Edit</button>
-				<button type="button" class="btn btn-danger">Hapus</button>
+				<!-- <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">Edit</button> -->
+				<a href="/admin/jadwal-dokter/{{$jd->id}}/edit" type="button" class="btn btn-warning">Edit</a>
+				<a href="/admin/jadwal-dokter/{{$jd->id}}/delete" type="button" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this item?');">Delete</a>
 			</td>
 		</tr>
 		<tr>
 			<td class="padding-left5">Selasa</td>
-			<td class="padding-left5">10.00 - 14.00 WIB</td>
+			<td class="padding-left5">{{$jd->selasa}}</td>
 		</tr>
 		<tr>
 			<td class="padding-left5">Rabu</td>
-			<td class="padding-left5">10.00 - 14.00 WIB</td>
+			<td class="padding-left5">{{$jd->rabu}}</td>
 		</tr>
 		<tr>
 			<td class="padding-left5">Kamis</td>
-			<td class="padding-left5">10.00 - 14.00 WIB</td>
+			<td class="padding-left5">{{$jd->kamis}}</td>
 		</tr	>
 		<tr>
 			<td class="padding-left5">Jumat</td>
-			<td class="padding-left5">10.00 - 14.00 WIB</td>
+			<td class="padding-left5">{{$jd->jumat}}</td>
 		</tr>
+		@endforeach
 		<!--STOP ONE ROW-->
 	</tbody>
 </table>
 <!-- END TABLE-->
 
-<!--START EDIT-->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!--Tambah-->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
-				<h3 class="modal-title" id="exampleModalLabel">Edit</h3>
+				<h3 class="modal-title" id="exampleModalLabel">Tambah Jadwal</h3>
 			</div>
 			<div class="modal-body">
-				<!-- INPUTS -->
-				<div>
-					<label><h4>Nama Dokter</h4></label>
-					<input type="text" class="form-control" placeholder="Nama Dokter">
-					<br>
-					<label><h4>Bidang</h4></label>
-					<input type="text" class="form-control" placeholder="Bidang">
-					<br>
-					<label><h4>Jadwal</h4></label>
-					<p>Senin</p>
-					<select class="form-control">
-						<option value="-">-</option>
-						<option value="08.00 - 10.00 WIB">08.00 - 10.00 WIB</option>
-						<option value="10.00 - 12.00 WIB">10.00 - 12.00 WIB</option>
-						<option value="12.00 - 14.00 WIB">12.00 - 14.00 WIB</option>
-						<option value="14.00 - 16.00 WIB">14.00 - 16.00 WIB</option>
-					</select>
-					<br>
-					<p>Selasa</p>
-					<select class="form-control">
-						<option value="-">-</option>
-						<option value="08.00 - 10.00 WIB">08.00 - 10.00 WIB</option>
-						<option value="10.00 - 12.00 WIB">10.00 - 12.00 WIB</option>
-						<option value="12.00 - 14.00 WIB">12.00 - 14.00 WIB</option>
-						<option value="14.00 - 16.00 WIB">14.00 - 16.00 WIB</option>
-					</select>
-					<br>
-					<p>Rabu</p>
-					<select class="form-control">
-						<option value="-">-</option>
-						<option value="08.00 - 10.00 WIB">08.00 - 10.00 WIB</option>
-						<option value="10.00 - 12.00 WIB">10.00 - 12.00 WIB</option>
-						<option value="12.00 - 14.00 WIB">12.00 - 14.00 WIB</option>
-						<option value="14.00 - 16.00 WIB">14.00 - 16.00 WIB</option>
-					</select>
-					<br>
-					<p>Kamis</p>
-					<select class="form-control">
-						<option value="-">-</option>
-						<option value="08.00 - 10.00 WIB">08.00 - 10.00 WIB</option>
-						<option value="10.00 - 12.00 WIB">10.00 - 12.00 WIB</option>
-						<option value="12.00 - 14.00 WIB">12.00 - 14.00 WIB</option>
-						<option value="14.00 - 16.00 WIB">14.00 - 16.00 WIB</option>
-					</select>
-					<br>
-					<p>Jumat</p>
-					<select class="form-control">
-						<option value="-">-</option>
-						<option value="08.00 - 10.00 WIB">08.00 - 10.00 WIB</option>
-						<option value="10.00 - 12.00 WIB">10.00 - 12.00 WIB</option>
-						<option value="12.00 - 14.00 WIB">12.00 - 14.00 WIB</option>
-						<option value="14.00 - 16.00 WIB">14.00 - 16.00 WIB</option>
-					</select>
-				</div>				
-				<!-- END INPUTS -->
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-primary">Simpan</button>
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
 			</div>
 		</div>
 	</div>
-</div>
-<!--END EDIT-->
+<</div> -->
+<!--END Tambah-->
 @endsection
