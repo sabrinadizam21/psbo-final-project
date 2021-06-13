@@ -48,11 +48,11 @@ class RegisterController extends Controller
     }
     public function showAdminRegisterForm()
     {
-        return view('auth.register', ['url' => 'admin']);
+        return view('auth.registeradmin', ['url' => 'admin']);
     }
     public function showDokterRegisterForm()
     {
-        return view('auth.register', ['url' => 'dokter']);
+        return view('auth.registerdokter', ['url' => 'dokter']);
     }
 
     /**
@@ -82,6 +82,18 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'id_pasien' => $data['id_pasien'],
+            'nim' => $data['nim'],
+            'mayor' => $data['mayor'],
+            'fakultas' => $data['fakultas'],
+            'kode_strata' => $data['kode_strata'],
+            'jenis_kelamin' => $data['jenis_kelamin'],
+            'umur' => $data['umur'],
+            'no_bpjs' => $data['no_bpjs'],
+            'goldar' => $data['goldar'],
+            'no_hp' => $data['no_hp'],
+            'alamat' => $data['alamat'],
+
         ]);
     }
 

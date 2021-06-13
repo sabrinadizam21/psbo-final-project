@@ -29,7 +29,7 @@
                             </div>
                         </div>
 
-                        <!-- Tambahan User !-->
+                        <!--
 
                         <div class="form-group row">
                             <label for="id_pasien" class="col-md-4 col-form-label text-md-right">{{ __('ID_Pasien') }}</label>
@@ -185,7 +185,7 @@
                             </div>
                         </div>
 
-                        <!-- end !-->
+                        !-->
 
 
                         <div class="form-group row">

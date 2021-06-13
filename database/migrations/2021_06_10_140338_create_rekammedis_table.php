@@ -15,7 +15,8 @@ class CreateRekammedisTable extends Migration
     {
         Schema::create('rekammedis', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('id_pasien');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->float('berat_badan');
             $table->string('tekanan_darah');
             $table->text('keluhan');
