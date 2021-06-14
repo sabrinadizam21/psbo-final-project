@@ -93,4 +93,8 @@ class StaffController extends Controller
     	return view('staff.edit-rekam-medis');
     }
 
+    public function rekam_medis_detail()
+    {
+        return view('staff.detail-rekam-medis');
+    }
 }
