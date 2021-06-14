@@ -55,9 +55,15 @@ Route::prefix('admin')->group(function(){
 	Route::get('/jadwal-dokter','StaffController@jadwal_dokter');
 	Route::get('/rekam-medis', 'StaffController@rekam_medis_daftar');
 	//Route::get('/rekam-medis/individu', 'StaffController@rekam_medis_individu');
+
 	Route::get('/rekam-medis/individu/{id}', 'StaffController@rekam_medis_individu');
 	Route::get('/rekam-medis-tambah', 'StaffController@rekam_medis_tambah');
+	Route::post('/rekam-medis/create', 'StaffController@rekam_medis_create');
+	//Route::post('/rekam-medis/create', 'RekamMedisController@rekammediscreate');
+
+
 	Route::get('/rekam-medis-edit', 'StaffController@rekam_medis_edit');
+
 	Route::get('/jadwal-dokter/tambah','StaffController@jadwal_dokter_tambah');
 	Route::post('/jadwal-dokter/create','StaffController@jadwal_dokter_create');
 	Route::get('/jadwal-dokter/{id}/edit','StaffController@jadwal_dokter_edit');

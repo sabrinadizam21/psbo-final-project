@@ -15,7 +15,7 @@ class RekamMedisController extends Controller
     public function rekammediscreate(Request $request)
     {
         \App\RekamMedis::create($request->all());
-        return redirect('/rekam-medis')->with('rekammedissukses','Rekam Medis Berhasil di Input');
+        return redirect('staff.rekam-medis')->with('rekammedissukses','Rekam Medis Berhasil di Input');
     }
 
     public function rekammedisedit($id)

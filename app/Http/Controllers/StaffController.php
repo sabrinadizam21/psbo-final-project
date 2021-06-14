@@ -54,7 +54,7 @@ class StaffController extends Controller
 
     public function rekam_medis_daftar()
     {
-        $daftar_user = \App\User::all();
+        $daftar_user = \App\RekamMedis::all();
         return view('staff.daftar-rekam-medis',['daftar_user' => $daftar_user]);
     	//return view('staff.daftar-rekam-medis');
     }
@@ -63,15 +63,26 @@ class StaffController extends Controller
     {
         //$user_individu = \App\User::all();
         $user_individu = \App\User::find($id);
+        //dd($user_individu);
         //$rm_individu = \App\RekamMedis::find($user_id);
         return view('staff.rekam-medis-individu',['user_individu' => $user_individu]);
        // return view('staff.rekam-medis-individu');
+
 
     }
 
     public function rekam_medis_tambah()
     {
-    	return view('staff.tambah-rekam-medis');
+        $user = \App\User::all();
+    	return view('staff.tambah-rekam-medis', ['user' => $user]);
+    	//return view('staff.tambah-rekam-medis');
+    }
+
+    public function rekam_medis_create(Request $request)
+    {
+        \App\RekamMedis::create($request->all());
+    	return redirect('/admin/rekam-medis')->with('sukses', 'Data berhasil di simpan');
+    	//return view('staff.tambah-rekam-medis');
     }
 
     public function rekam_medis_edit()

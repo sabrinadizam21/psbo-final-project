@@ -14,12 +14,21 @@
 @section('subtitle-content') Mahasiswa @endsection
 
 @section('main-content')
+
+@if(session('sukses'))
+<div class="alert alert-success alert-dismissible" role="alert">
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	<i class="fa fa-check-circle"></i> {{session('sukses')}}
+</div>
+@endif
+<a href="{{url('/admin/rekam-medis-tambah')}}" class="btn btn-default" type="button"><i class="fa fa-plus-square"></i> Tambah </a>
+
 <!-- DAFTAR REKAM MEDIS MAHASISWA -->
 <div class="panel-body no-padding">
 	<table class="table table-striped">
 		<thead>
 			<tr>
-				<th>ID</th>
+				<th width="20%">ID</th>
 				<th width="25%" style="text-align: left;">Nama</th>
 				<th class="text-center">NIM</th>
 				<th class="text-center">Umur</th>
@@ -31,13 +40,13 @@
 		<tbody>
 		@foreach($daftar_user as $user)
 			<tr>
-				<td>{{$user->id}}</td>
-				<td style="text-align: left;">{{$user->name}}</td>
-				<td>{{$user->nim}}</td>
-				<td>{{$user->umur}}</td>
-				<td>{{$user->jenis_kelamin}}</td>
+				<td>{{$user->userid->id}}</td>
+				<td style="text-align: left;">{{$user->userid->name}}</td>
+				<td>{{$user->userid->nim}}</td>
+				<td>{{$user->userid->umur}}</td>
+				<td>{{$user->userid->jenis_kelamin}}</td>
 				<td><span class="label label-success">TERDAFTAR</span></td>
-				<form action="/admin/rekam-medis/individu/{{$user->id}}">
+				<form action="/admin/rekam-medis/individu/{{$user->userid->id}}">
 				<td><div class="col-md-6 text-center"><button type="submit" class="btn btn-info btn-sm"><span class="fa fa-search" ></span></div></td>
 				</form>
 			

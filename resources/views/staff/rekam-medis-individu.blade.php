@@ -7,45 +7,6 @@
 @section('subtitle-content') Mahasiswa @endsection
 
 @section('main-content')
-<div class="panel-profile">
-	<div class="clearfix">
-		<!-- LEFT COLUMN
-		<div class="profile-left">
-			PROFILE HEADER 
-			<form action="/admin/rekam-medis/individu/{{$user_individu->id}}" method="GET">
-			@if(isset($user_individu)) 
-			<div class="profile-header">
-			@foreach($user_individu as $user_individu)
-			{{csrf_field()}}
-				<div class="overlay"></div>
-				<div class="profile-main">
-					<img src="{{asset('assets/img/user-medium.png')}}" class="img-circle" alt="Avatar">
-				
-					<h3 class="name">{{ $user_individu['name'] }}</h3>
-					
-				</div>
-			</div>
-			END PROFILE HEADER 
-			PROFILE DETAIL
-			<div class="profile-detail" style="padding-bottom: 0px !important;">
-				<div class="profile-info">
-					<ul class="list-unstyled list-justify">
-						<ul class="list-unstyled list-justify">
-							<li>NIM <span>{{ $user_individu['nim'] }}</span></li>
-							<li>Asal Daerah <span>{{ $user_individu['alamat'] }}</span></li>
-							<li>Umur <span>{{ $user_individu['umur'] }}</span></li>
-							<li>Jenis Kelamin <span>{{ $user_individu['jenis_kelamin'] }}</span></li>
-						</ul>
-					</ul>
-				</div>
-				 @endforeach	
-				 @endif
-			</div>
-			</form>
-			
-		 END PROFILE DETAIL
-		</div> -->
-		<!-- END LEFT COLUMN -->
 		<!-- REKAM MEDIS -->
 		<div class="profile-right">
 			<!-- TABBED CONTENT -->
