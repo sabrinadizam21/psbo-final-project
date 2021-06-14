@@ -11,7 +11,7 @@ class StaffController extends Controller
     	return view('staff.dashboard-staff');
     }
 
-    // JADWA DOKTER
+    // JADWAL DOKTER
     public function jadwal_dokter()
     {
     	$jadwal_dokter = \App\JadwalDokter::all();
@@ -50,14 +50,23 @@ class StaffController extends Controller
     	return redirect('/admin/jadwal-dokter')->with('sukses', 'Data berhasil di hapus');
     }
 
+    // REKAM MEDIS 
+
     public function rekam_medis_daftar()
     {
-    	return view('staff.daftar-rekam-medis');
+        $daftar_user = \App\User::all();
+        return view('staff.daftar-rekam-medis',['daftar_user' => $daftar_user]);
+    	//return view('staff.daftar-rekam-medis');
     }
 
-    public function rekam_medis_individu()
+    public function rekam_medis_individu($id)
     {
-    	return view('staff.rekam-medis-individu');
+        //$user_individu = \App\User::all();
+        $user_individu = \App\User::find($id);
+        //$rm_individu = \App\RekamMedis::find($user_id);
+        return view('staff.rekam-medis-individu',['user_individu' => $user_individu]);
+       // return view('staff.rekam-medis-individu');
+
     }
 
     public function rekam_medis_tambah()

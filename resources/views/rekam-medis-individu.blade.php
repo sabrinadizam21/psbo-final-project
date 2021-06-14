@@ -22,39 +22,39 @@
                             <img src="{{url('/images/profil-2.png')}}"/>   
                             </div>
                             <div class="main-inf">
-                                <h5>Sabrina Diza</h5>
-                                <p>ID Pasien 2456772837</p>
+                                <h5>{{ Auth::user()->name }}</h5>
+                                <p>{{ Auth::user()->id_pasien }}</p>
                             </div>
                             <div class="kotak-dua">
                                 <div class="kotak-dalam float-left">
                                     <h5>Jenis Kelamin</h5>
-                                    <p>Perempduan</p>
+                                    <p>{{ Auth::user()->jenis_kelamin }}</p>
                                 </div>
                                 <div class="kotak-dalam float-right">
                                     <h5>Umur</h5>
-                                    <p>30 tahun</p>
+                                    <p>{{ Auth::user()->umur }}</p>
                                 </div>
                             </div>
                             <div class="kotak-info">
                                 <div class="info-pasien">
                                     <h5>No. BPJS</h5>
-                                    <p>12439847329847</p>
+                                    <p>{{ Auth::user()->no_bpjs }}</p>
                                 </div>
                                 <div class="info-pasien">
                                     <h5>Golongan Darah</h5>
-                                    <p>A</p>
+                                    <p>{{ Auth::user()->goldar }}</p>
                                 </div>
                                 <div class="info-pasien">
                                     <h5>Fakultas/Departemen</h5>
-                                    <p>FMIPA/Ilmu Komputer</p>
+                                    <p>{{ Auth::user()->fakultas }} / {{ Auth::user()->mayor }}</p>
                                 </div>
                                 <div class="info-pasien">
                                     <h5>Alamat</h5>
-                                    <p>Jln. Bara Tengah No. 22</p>
+                                    <p>{{ Auth::user()->alamat }}</p>
                                 </div>
                                 <div class="info-pasien">
                                     <h5>No. HP</h5>
-                                    <p>085213223696</p>
+                                    <p>{{ Auth::user()->no_hp }}</p>
                                 </div>
                             </div>    
                         </div>

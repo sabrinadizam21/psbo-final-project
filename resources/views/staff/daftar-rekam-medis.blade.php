@@ -29,15 +29,24 @@
 			</tr>
 		</thead>
 		<tbody>
+		@foreach($daftar_user as $user)
 			<tr>
-				<td>001</td>
-				<td style="text-align: left;">Steve</td>
-				<td>763648</td>
-				<td>76</td>
-				<td>Pria</td>
+				<td>{{$user->id}}</td>
+				<td style="text-align: left;">{{$user->name}}</td>
+				<td>{{$user->nim}}</td>
+				<td>{{$user->umur}}</td>
+				<td>{{$user->jenis_kelamin}}</td>
 				<td><span class="label label-success">TERDAFTAR</span></td>
-				<td><div class="col-md-6 text-center"><a href="{{url('/admin/rekam-medis/individu')}}" class="btn btn-info btn-sm"><span class="fa fa-search" ></span></a></div></td>
+				<form action="/admin/rekam-medis/individu/{{$user->id}}">
+				<td><div class="col-md-6 text-center"><button type="submit" class="btn btn-info btn-sm"><span class="fa fa-search" ></span></div></td>
+				</form>
+			
+				<!--
+				<td><div class="col-md-6 text-center"><a href="/admin/rekam-medis/individu/{{$user->id}}" class="btn btn-info btn-sm" method="GET"><span class="fa fa-search" ></span></a></div></td>
+			!-->
 			</tr>
+		@endforeach
+			<!--
 			<tr>
 				<td>002</td>
 				<td style="text-align: left;">Jobs</td>
@@ -47,6 +56,7 @@
 				<td><span class="label label-danger">BELUM TERDAFTAR</span></td>
 				<td><div class="col-md-6 text-center"><a href="#" class="btn btn-info btn-sm"><span class="fa fa-search" ></span></a></div></td>
 			</tr>
+			!-->
 		</tbody>
 	</table>
 </div>
