@@ -57,7 +57,7 @@ Route::prefix('admin')->group(function(){
 	//Route::get('/rekam-medis/individu', 'StaffController@rekam_medis_individu');
 
 	Route::get('/rekam-medis/individu/{id}', 'StaffController@rekam_medis_individu');
-	Route::get('/rekam-medis-detail', 'StaffController@rekam_medis_detail');
+	Route::get('/rekam-medis-detail/{id}', 'StaffController@rekam_medis_detail');
 	Route::get('/rekam-medis-tambah', 'StaffController@rekam_medis_tambah');
 	Route::post('/rekam-medis/create', 'StaffController@rekam_medis_create');
 	//Route::post('/rekam-medis/create', 'RekamMedisController@rekammediscreate');

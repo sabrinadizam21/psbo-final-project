@@ -20,10 +20,10 @@
 					<div class="profile-detail" style="padding-bottom: 0px !important;">
 						<ul class="list-unstyled list-justify">
 							<ul class="list-unstyled list-justify">
-								<li>NIM <span>G64000001</span></li>
-								<li>Asal Daerah <span>Bogor</span></li>
-								<li>Umur <span>21 Tahun</span></li>
-								<li>Jenis Kelamin <span>Laki-laki</span></li>
+								<li>NIM <span>{{$rekam_medis->userid->nim}}</span></li>
+								<li>Asal Daerah <span>{{$rekam_medis->userid->alamat}}</span></li>
+								<li>Umur <span>{{$rekam_medis->userid->umur}} Tahun</span></li>
+								<li>Jenis Kelamin <span>{{$rekam_medis->userid->jenis_kelamin}}</span></li>
 							</ul>
 						</ul>
 					</div>
@@ -75,7 +75,7 @@
 
 @section('title-content') Hasil Periksa @endsection
 
-@section('subtitle-content') 16/9/2020 09:08:00 @endsection
+@section('subtitle-content') {{$rekam_medis->tanggal}} @endsection
 
 @section('main-content')
 <!-- TABLE STRIPED -->
@@ -91,67 +91,67 @@
 		<tr>
 			<td>1</td>
 			<td style="text-align: left;">Keluhan</td>
-			<td style="text-align: left;">Steve</td>
+			<td style="text-align: left;">{{$rekam_medis->keluhan}}</td>
 		</tr>
 		<tr>
 			<td>2</td>
 			<td style="text-align: left;">Anamnesa Pemeriksaan Fisik Perawat</td>
-			<td style="text-align: left;">Steve</td>
+			<td style="text-align: left;">{{$rekam_medis->anamnesa_pemeriksaan_fisik_perawat}}</td>
 		</tr>
 		<tr>
 			<td>3</td>
-			<td style="text-align: left;">Anamnesa Pemeriksaan Dokte</td>
-			<td style="text-align: left;">Steve</td>
+			<td style="text-align: left;">Anamnesa Pemeriksaan Dokter</td>
+			<td style="text-align: left;">{{$rekam_medis->anamnesa_pemeriksaan_dokter}}</td>
 		</tr>
 		<tr>
 			<td>4</td>
 			<td style="text-align: left;">Tinggi Badan</td>
-			<td style="text-align: left;">Steve</td>
+			<td style="text-align: left;">{{$rekam_medis->tinggi_badan}}</td>
 		</tr>
 		<tr>
 			<td>5</td>
 			<td style="text-align: left;">Berat Badan</td>
-			<td style="text-align: left;">Steve</td>
+			<td style="text-align: left;">{{$rekam_medis->berat_badan}}</td>
 		</tr>
 		<tr>
 			<td>6</td>
 			<td style="text-align: left;">Sistole</td>
-			<td style="text-align: left;">Steve</td>
+			<td style="text-align: left;">{{$rekam_medis->sistole}}</td>
 		</tr>
 		<tr>
 			<td>7</td>
 			<td style="text-align: left;">Diastole</td>
-			<td style="text-align: left;">Steve</td>
+			<td style="text-align: left;">{{$rekam_medis->diastole}}</td>
 		</tr>
 		<tr>
 			<td>8</td>
 			<td style="text-align: left;">Respirasi</td>
-			<td style="text-align: left;">Steve</td>
+			<td style="text-align: left;">{{$rekam_medis->respirasi}}</td>
 		</tr>
 		<tr>
 			<td>9</td>
 			<td style="text-align: left;">Nadi</td>
-			<td style="text-align: left;">Steve</td>
+			<td style="text-align: left;">{{$rekam_medis->nadi}}</td>
 		</tr>
 		<tr>
 			<td>10</td>
 			<td style="text-align: left;">Diagnosa</td>
-			<td style="text-align: left;">Steve</td>
+			<td style="text-align: left;">{{$rekam_medis->diagnosis}}</td>
 		</tr>
 		<tr>
 			<td>11</td>
 			<td style="text-align: left;">Dokter</td>
-			<td style="text-align: left;">Steve</td>
+			<td style="text-align: left;">{{$rekam_medis->dokter}}</td>
 		</tr>
 		<tr>
 			<td>12</td>
 			<td style="text-align: left;">Perawat</td>
-			<td style="text-align: left;">Steve</td>
+			<td style="text-align: left;">{{$rekam_medis->perawat}}</td>
 		</tr>
 		<tr>
 			<td>13</td>
 			<td style="text-align: left;">Apoteker</td>
-			<td style="text-align: left;">Steve</td>
+			<td style="text-align: left;">{{$rekam_medis->apoteker}}</td>
 		</tr>
 	</tbody>
 </table>

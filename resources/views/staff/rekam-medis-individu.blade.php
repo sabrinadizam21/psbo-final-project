@@ -30,75 +30,52 @@
 						</tr>
 					</thead>
 					<tbody>
+						@foreach($rekammedis as $rekammedises)
 						<tr>
-							<td>16/9/2020 09:08:00</td>
-							<td>Pemeriksaan</td>
-							<td>Dr. A, S.Komp.</td>
+							<td>{{$rekammedises->tanggal}}</td>
+							<td>{{$rekammedises->keluhan}}</td>
+							<td>{{$rekammedises->dokter}}</td>
 							<td>
 								<a href="{{url('/admin/rekam-medis-edit')}}" type="button" class="btn btn-warning btn-xs">Edit</a>	
 								<!-- <button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#exampleModal">Edit</button> -->
 								<button type="button" class="btn btn-danger btn-xs">Hapus</button>
-								<a href="{{url('/admin/rekam-medis-detail')}}" type="button" class="btn btn-primary btn-xs">Lihat</a>									
+								<a href="/admin/rekam-medis-detail/{{$rekammedises->id}}" type="button" class="btn btn-primary btn-xs">Lihat</a>									
 							</td>
 						</tr>
+						@endforeach
 					</tbody>
 				</table>
 			</div>
-			<!--Hasil Periksa-->
-			<div class="tab-content">
-				<div class="tab-pane fade in active" id="tab-bottom-left1">
-					<div class="panel-body no-padding">
-						<table class='table'>
-                                            <tr>
-                                                
-                                                <th>Berat Badan</th>
-                                                <th>Tekanan Darah</th>
-                                                
-                                            </tr>
-                                            @foreach($rekammedis as $rekammedises)
-                                            <tr>
-                                                
-                                                <td>{{$rekammedises->berat_badan}}</td>
-                                                <td>{{$rekammedises->tekanan_darah}}</td>
-                                                                                               
-                                            </tr>
-                                            @endforeach
-                                            
-                                        </table>
-					</div>
-					
-					
-				</div>
-				<!-- End Hasil Periksa -->
-				<!-- Riwayat Penyakit -->
-				<div class="tab-pane fade" id="tab-bottom-left2">
-					<div class="panel-body no-padding">
-						<table class="table table-striped">
-							<thead>
-								<tr>
-									<th>No</th>
-									<th>Penyakit</th>
-									<th>Tahun</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>1</td>
-									<td>Cantengan</td>
-									<td>2015</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div class="margin-top-30 text-center"><a href="#" class="btn btn-default">Tambah</a></div>
-				</div>
-				<!--Riwayat Penyakit-->
+		</div>
+		<!-- Riwayat Penyakit -->
+		<div class="tab-pane fade" id="tab-bottom-left2">
+			<div class="panel-body no-padding">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>No</th>
+							<th>Penyakit</th>
+							<th>Tahun</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>Cantengan</td>
+							<td>2015</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 			<div class="margin-top-30 text-center"><a href="#" class="btn btn-default">Tambah</a></div>
 		</div>
 		<!--Riwayat Penyakit-->
 	</div>
-	<!-- END TABBED CONTENT -->
+	<div class="margin-top-30 text-center"><a href="#" class="btn btn-default">Tambah</a></div>
+</div>
+<!--Riwayat Penyakit-->
+</div>
+<!-- END TABBED CONTENT -->
 </div>
 <!-- END REKAM MEDIS -->
 </div>

@@ -93,8 +93,12 @@ class StaffController extends Controller
     	return view('staff.edit-rekam-medis');
     }
 
-    public function rekam_medis_detail()
+    public function rekam_medis_detail($id)
     {
-        return view('staff.detail-rekam-medis');
+        //$rekammedis_individu = \App\RekamMedis::where('user_id',$id)->get();
+        $rekammedis = \App\RekamMedis::find($id);
+        //dump($rekammedis_individu);
+        return view('staff/detail-rekam-medis', ['rekam_medis' => $rekammedis]);
+        // return view('staff.detail-rekam-medis');
     }
 }
