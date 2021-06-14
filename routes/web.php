@@ -61,6 +61,7 @@ Route::prefix('admin')->group(function(){
 	Route::post('/rekam-medis/create', 'StaffController@rekam_medis_create');
 	//Route::post('/rekam-medis/create', 'RekamMedisController@rekammediscreate');
 
+	
 
 	Route::get('/rekam-medis-edit', 'StaffController@rekam_medis_edit');
 

@@ -40,13 +40,14 @@
 		<tbody>
 		@foreach($daftar_user as $user)
 			<tr>
-				<td>{{$user->userid->id}}</td>
-				<td style="text-align: left;">{{$user->userid->name}}</td>
-				<td>{{$user->userid->nim}}</td>
-				<td>{{$user->userid->umur}}</td>
-				<td>{{$user->userid->jenis_kelamin}}</td>
+				<td>{{$user->id}}</td>
+				<td style="text-align: left;">{{$user->name}}</td>
+				<td>{{$user->nim}}</td>
+				<td>{{$user->umur}}</td>
+				<td>{{$user->jenis_kelamin}}</td>
 				<td><span class="label label-success">TERDAFTAR</span></td>
-				<form action="/admin/rekam-medis/individu/{{$user->userid->id}}">
+				<!--<td><a href="/admin/rekam-medis/individu/{{$user->id}}" class="btn btn-warning btn-sm">lihat</a></td>-->
+				<form action="/admin/rekam-medis/individu/{{$user->id}}">
 				<td><div class="col-md-6 text-center"><button type="submit" class="btn btn-info btn-sm"><span class="fa fa-search" ></span></div></td>
 				</form>
 			

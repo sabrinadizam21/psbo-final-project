@@ -54,7 +54,8 @@ class StaffController extends Controller
 
     public function rekam_medis_daftar()
     {
-        $daftar_user = \App\RekamMedis::all();
+        $daftar_user = \App\User::all();
+        //dump($daftar_user);
         return view('staff.daftar-rekam-medis',['daftar_user' => $daftar_user]);
     	//return view('staff.daftar-rekam-medis');
     }
@@ -62,12 +63,14 @@ class StaffController extends Controller
     public function rekam_medis_individu($id)
     {
         //$user_individu = \App\User::all();
-        $user_individu = \App\User::find($id);
+        //$user_individu = \App\User::find($id);
         //dd($user_individu);
         //$rm_individu = \App\RekamMedis::find($user_id);
-        return view('staff.rekam-medis-individu',['user_individu' => $user_individu]);
+        //return view('staff.rekam-medis-individu',['user_individu' => $user_individu]);
        // return view('staff.rekam-medis-individu');
-
+        $rekammedisbefore = \App\RekamMedis::where('user_id',$id)->get();
+        //dump($rekammedisbefore);
+        return view('staff/rekam-medis-individu', ['rekammedis' => $rekammedisbefore]);
 
     }
 
@@ -89,4 +92,5 @@ class StaffController extends Controller
     {
     	return view('staff.edit-rekam-medis');
     }
+
 }
