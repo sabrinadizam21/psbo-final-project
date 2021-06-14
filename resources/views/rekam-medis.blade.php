@@ -71,25 +71,9 @@
                                 <div id="rekammedis">
                                     <div class="row">
                                     
-                                        <div class="col-6">
-                                            <h1 class="float-left">List Rekam Medis</h1>
-                                        </div>
-                                        <div class="col-6">
-                                        <!-- Button trigger modal -->
-                                            <button type="button" class="btn btn-primary btn-sm float-right" data-toggle="modal" data-target="#exampleModal">
-                                            Tambah Rekam Medis
-                                            </button>
-
-                                            
-                                        </div>
-                                        @if(session('rekammedissukses'))
-                                        <div class="alert alert-success" role="alert">
-                                            {{session('rekammedissukses')}}
-                                        </div>
-                                        @endif
                                         <table class='table'>
                                             <tr>
-                                                <th width="20%"> ID Pasien</th>
+                                                <th width="20%">Tanggal</th>
                                                 <th>Berat Badan</th>
                                                 <th>Tekanan Darah</th>
                                                 <th>Keluhan</th>
@@ -98,14 +82,16 @@
                                             </tr>
                                             @foreach($data_rekammedis as $rekammedis)
                                             <tr>
-                                                <td>{{$rekammedis->id}}</td>
+                                                <td>{{$rekammedis->tanggal}}</td>
                                                 <td>{{$rekammedis->berat_badan}}</td>
                                                 <td>{{$rekammedis->tekanan_darah}}</td>
                                                 <td>{{$rekammedis->keluhan}}</td>
                                                 <td>{{$rekammedis->diagnosis}}</td>
                                                 <td>
-                                                <a href="rekam-medis/{{$rekammedis->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
+                                                <a href="/rekam-medis/{{$rekammedis->user_id}}/show" type="button" class="btn btn-primary btn-xs"><span class="fa fa-search" ></span></a>
+                                                <!-- <a href="rekam-medis/{{$rekammedis->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
                                                 <a href="rekam-medis/{{$rekammedis->id}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Apakah anda yakin ingin menghapus rekam medis ini?')">Delete</a>
+                                                -->
                                                 </td>                                                
                                             </tr>
                                             @endforeach

@@ -6,10 +6,15 @@ use Illuminate\Http\Request;
 
 class RekamMedisController extends Controller
 {
-    public function rekammedis()
+    public function rekammedis($id)
     {
-        $data_rekammedis = \App\RekamMedis::all();
+        $data_rekammedis = \App\RekamMedis::where('user_id',$id)->get();
         return view('rekam-medis',['data_rekammedis' => $data_rekammedis]);
+    }
+
+    public function rekammedisshow()
+    {
+        return view('rekam-medis-individu');
     }
 
     public function rekammediscreate(Request $request)
