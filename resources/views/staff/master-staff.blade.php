@@ -71,7 +71,8 @@
 		<div class="main">
 			<!-- MAIN CONTENT -->
 			<div class="main-content">
-				<div class="container-fluid">
+				<div class="container-fluid">					
+					@yield('content')
 					<!-- OVERVIEW -->
 					<div class="panel panel-headline">
 						<div class="panel-heading">
@@ -90,7 +91,7 @@
 		<div class="clearfix"></div>
 		<footer>
 			<div class="container-fluid">
-				<p class="copyright">&copy; 2021 <a href="https://www.simak.apps.ipb.ac.id" target="_blank">SIK-POLI</a>. All Rights Reserved.</p>
+				<p class="copyright">&copy; 2021 <a href="https://www.ipb.ac.id" target="_blank">SIK-POLI</a>. All Rights Reserved.</p>
 			</div>
 		</footer>
 	</div>

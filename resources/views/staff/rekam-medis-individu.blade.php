@@ -7,74 +7,74 @@
 @section('subtitle-content') Mahasiswa @endsection
 
 @section('main-content')
-		<!-- REKAM MEDIS -->
-		<div class="profile-right">
-			<!-- TABBED CONTENT -->
-			<div class="custom-tabs-line tabs-line-bottom left-aligned">
-				<ul class="nav" role="tablist">
-					<li class="active"><a href="#tab-bottom-left1" role="tab" data-toggle="tab">Hasil Periksa</a></li>
-					<li><a href="#tab-bottom-left2" role="tab" data-toggle="tab">Riwayat Penyakit</a></li>
-				</ul>
-			</div>
-			<!--Hasil Periksa-->
-			<div class="tab-content">
-				<div class="tab-pane fade in active" id="tab-bottom-left1">
-					<div class="panel-body no-padding">
-						<table class="table table-striped">
-							<thead>
-								<tr>
-									<th>Tanggal</th>
-									<th>Keluhan</th>
-									<th>Dokter</th>
-									<th>Aksi</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>16/9/2020 09:08:00</td>
-									<td>Pemeriksaan</td>
-									<td>Dr. A, S.Komp.</td>
-									<td>
-										<a href="{{url('/admin/rekam-medis-edit')}}" type="button" class="btn btn-warning btn-xs">Edit</a>	
-										<!-- <button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#exampleModal">Edit</button> -->
-										<button type="button" class="btn btn-danger btn-xs">Hapus</button>
-										<a href="{{url('/admin/rekam-medis-tambah')}}" type="button" class="btn btn-primary btn-xs">Lihat</a>									
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div class="margin-top-30 text-center"><a href="{{url('/admin/rekam-medis-tambah')}}" class="btn btn-default">Tambah</a></div>
-					
-				</div>
-				<!-- End Hasil Periksa -->
-				<!-- Riwayat Penyakit -->
-				<div class="tab-pane fade" id="tab-bottom-left2">
-					<div class="panel-body no-padding">
-						<table class="table table-striped">
-							<thead>
-								<tr>
-									<th>No</th>
-									<th>Penyakit</th>
-									<th>Tahun</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>1</td>
-									<td>Cantengan</td>
-									<td>2015</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div class="margin-top-30 text-center"><a href="#" class="btn btn-default">Tambah</a></div>
-				</div>
-				<!--Riwayat Penyakit-->
-			</div>
-			<!-- END TABBED CONTENT -->
-		</div>
-		<!-- END REKAM MEDIS -->
+<!-- REKAM MEDIS -->
+<div class="">
+	<!-- TABBED CONTENT -->
+	<div class="custom-tabs-line tabs-line-bottom left-aligned">
+		<ul class="nav" role="tablist">
+			<li class="active"><a href="#tab-bottom-left1" role="tab" data-toggle="tab">Hasil Periksa</a></li>
+			<li><a href="#tab-bottom-left2" role="tab" data-toggle="tab">Riwayat Penyakit</a></li>
+		</ul>
 	</div>
+	<!--Hasil Periksa-->
+	<div class="tab-content">
+		<div class="tab-pane fade in active" id="tab-bottom-left1">
+			<div class="panel-body no-padding">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Tanggal</th>
+							<th>Keluhan</th>
+							<th>Dokter</th>
+							<th>Aksi</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>16/9/2020 09:08:00</td>
+							<td>Pemeriksaan</td>
+							<td>Dr. A, S.Komp.</td>
+							<td>
+								<a href="{{url('/admin/rekam-medis-edit')}}" type="button" class="btn btn-warning btn-xs">Edit</a>	
+								<!-- <button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#exampleModal">Edit</button> -->
+								<button type="button" class="btn btn-danger btn-xs">Hapus</button>
+								<a href="{{url('/admin/rekam-medis-detail')}}" type="button" class="btn btn-primary btn-xs">Lihat</a>									
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="margin-top-30 text-center"><a href="{{url('/admin/rekam-medis-tambah')}}" class="btn btn-default">Tambah</a></div>
+
+		</div>
+		<!-- End Hasil Periksa -->
+		<!-- Riwayat Penyakit -->
+		<div class="tab-pane fade" id="tab-bottom-left2">
+			<div class="panel-body no-padding">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>No</th>
+							<th>Penyakit</th>
+							<th>Tahun</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>Cantengan</td>
+							<td>2015</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="margin-top-30 text-center"><a href="#" class="btn btn-default">Tambah</a></div>
+		</div>
+		<!--Riwayat Penyakit-->
+	</div>
+	<!-- END TABBED CONTENT -->
+</div>
+<!-- END REKAM MEDIS -->
+</div>
 </div>
 @endsection
