@@ -84,7 +84,7 @@ class StaffController extends Controller
     public function rekam_medis_create(Request $request)
     {
         \App\RekamMedis::create($request->all());
-    	return redirect('/admin/rekam-medis')->with('sukses', 'Data berhasil di simpan');
+    	return redirect('/admin/rekam-medis')->with('sukses', 'Rekam Medis Berhasil di Simpan');
     	//return view('staff.tambah-rekam-medis');
     }
 
@@ -98,7 +98,7 @@ class StaffController extends Controller
     {
         $rekam_medis = \App\RekamMedis::find($id);
         $rekam_medis->update($request->all());
-        return redirect('/admin/rekam-medis/individu/'.$rekam_medis->user_id);
+        return redirect('/admin/rekam-medis/individu/'.$rekam_medis->user_id)->with('sukses', 'Rekam Medis Berhasil di Update');
     }
 
     public function rekam_medis_detail($id)
@@ -114,7 +114,7 @@ class StaffController extends Controller
     {
         $rekammedis = \App\RekamMedis::find($id);
         $rekammedis->delete();
-        return redirect('/admin/rekam-medis')->with('sukses','Rekam Medis Berhasil Dihapus');
+        return redirect('/admin/rekam-medis/individu/'.$rekammedis->user_id)->with('sukses','Rekam Medis Berhasil Dihapus');
     }
 
 }

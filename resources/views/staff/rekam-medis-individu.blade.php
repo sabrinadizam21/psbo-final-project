@@ -7,6 +7,12 @@
 @section('subtitle-content') Mahasiswa @endsection
 
 @section('main-content')
+@if(session('sukses'))
+<div class="alert alert-success alert-dismissible" role="alert">
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	<i class="fa fa-check-circle"></i> {{session('sukses')}}
+</div>
+@endif
 <!-- REKAM MEDIS -->
 <div class="">
 	<!-- TABBED CONTENT -->
@@ -71,7 +77,6 @@
 		</div>
 		<!--Riwayat Penyakit-->
 	</div>
-	<div class="margin-top-30 text-center"><a href="#" class="btn btn-default">Tambah</a></div>
 </div>
 <!--Riwayat Penyakit-->
 </div>
