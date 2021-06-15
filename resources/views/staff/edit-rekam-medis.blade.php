@@ -4,8 +4,6 @@
 
 @section('title-content') Rekam Medis @endsection
 
-@section('subtitle-content') Nama @endsection
-
 @section('main-content')
 <form action="/admin/rekam-medis-edit/{{$rekam_medis->id}}/update" method="POST">
 <!--START EDIT-->

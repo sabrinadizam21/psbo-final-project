@@ -106,32 +106,32 @@
 		<tr>
 			<td>4</td>
 			<td style="text-align: left;">Tinggi Badan</td>
-			<td style="text-align: left;">{{$rekam_medis->tinggi_badan}}</td>
+			<td style="text-align: left;">{{$rekam_medis->tinggi_badan}} cm</td>
 		</tr>
 		<tr>
 			<td>5</td>
 			<td style="text-align: left;">Berat Badan</td>
-			<td style="text-align: left;">{{$rekam_medis->berat_badan}}</td>
+			<td style="text-align: left;">{{$rekam_medis->berat_badan}} Kg</td>
 		</tr>
 		<tr>
 			<td>6</td>
 			<td style="text-align: left;">Sistole</td>
-			<td style="text-align: left;">{{$rekam_medis->sistole}}</td>
+			<td style="text-align: left;">{{$rekam_medis->sistole}} mmHg</td>
 		</tr>
 		<tr>
 			<td>7</td>
 			<td style="text-align: left;">Diastole</td>
-			<td style="text-align: left;">{{$rekam_medis->diastole}}</td>
+			<td style="text-align: left;">{{$rekam_medis->diastole}} mmHg</td>
 		</tr>
 		<tr>
 			<td>8</td>
 			<td style="text-align: left;">Respirasi</td>
-			<td style="text-align: left;">{{$rekam_medis->respirasi}}</td>
+			<td style="text-align: left;">{{$rekam_medis->respirasi}} spm</td>
 		</tr>
 		<tr>
 			<td>9</td>
 			<td style="text-align: left;">Nadi</td>
-			<td style="text-align: left;">{{$rekam_medis->nadi}}</td>
+			<td style="text-align: left;">{{$rekam_medis->nadi}} bpm</td>
 		</tr>
 		<tr>
 			<td>10</td>
@@ -150,7 +150,7 @@
 		</tr>
 		<tr>
 			<td>13</td>
-			<td style="text-align: left;">Apoteker</td>
+			<td style="text-align: left;">Obat</td>
 			<td style="text-align: left;">{{$rekam_medis->apoteker}}</td>
 		</tr>
 	</tbody>

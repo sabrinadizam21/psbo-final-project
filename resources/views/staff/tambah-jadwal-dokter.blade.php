@@ -16,7 +16,7 @@
 		<select name="id_dokter" class="form-control">
 			<option>...</option>
 			@foreach($dokter as $dr)
-			<option>{{$dr->id}}</option>
+			<option  >{{$dr->id}}</option> 
 			@endforeach
 		</select>
 		<br>
