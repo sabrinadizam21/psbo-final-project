@@ -41,7 +41,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/rekam-medis/{id}', 'RekamMedisController@rekammedis');
 
-Route::get('/rekam-medis/{id}/show', 'RekamMedisController@rekammedisshow');
+Route::get('/rekam-medis/show/{id}', 'RekamMedisController@rekammedisshow');
 
 Route::post('/rekam-medis/create', 'RekamMedisController@rekammediscreate');
 

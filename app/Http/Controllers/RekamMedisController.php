@@ -12,9 +12,12 @@ class RekamMedisController extends Controller
         return view('rekam-medis',['data_rekammedis' => $data_rekammedis]);
     }
 
-    public function rekammedisshow()
+    public function rekammedisshow($id)
     {
-        return view('rekam-medis-individu');
+        $rekammedis_mhs = \App\RekamMedis::find($id);
+        return view('rekam-medis-individu', ['rekammedis_mhs' => $rekammedis_mhs]);
+        //return view('rekam-medis-individu');
+        //dd($rekammedis_mhs);
     }
 
     public function rekammediscreate(Request $request)

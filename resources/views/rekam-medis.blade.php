@@ -88,7 +88,7 @@
                                                 <td>{{$rekammedis->keluhan}}</td>
                                                 <td>{{$rekammedis->diagnosis}}</td>
                                                 <td>
-                                                <a href="/rekam-medis/{{$rekammedis->user_id}}/show" type="button" class="btn btn-primary btn-xs"><span class="fa fa-search" ></span></a>
+                                                <a href="/rekam-medis/show/{{$rekammedis->id}}" type="button" class="btn btn-primary btn-xs"><span class="fa fa-search" ></span></a>
                                                 <!-- <a href="rekam-medis/{{$rekammedis->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
                                                 <a href="rekam-medis/{{$rekammedis->id}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Apakah anda yakin ingin menghapus rekam medis ini?')">Delete</a>
                                                 -->

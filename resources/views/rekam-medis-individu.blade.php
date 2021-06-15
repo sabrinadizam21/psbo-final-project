@@ -64,39 +64,39 @@
                             <div class="pemeriksa">
                                 <div class="tanggal-periksa float-left">
                                     <img src="{{url('/images/kalender.png')}}"class="float-left margin-icon"> 
-                                    <p>Selasa, 4 September 2021</p>
+                                    <p>{{$rekammedis_mhs->tanggal}}</p>
                                 </div>
                                 <div class="dokter-periksa float-right">
                                     <img src="{{url('/images/dokter.png')}}"class="float-left margin-icon"> 
-                                    <p>Dr. Alwi Firdausi</p> 
+                                    <p>{{$rekammedis_mhs->dokter}}</p> 
                                 </div>
                             </div>
                             <div class="garis"></div>
                             <div class="box-basic">
                                 <div class="card-basic margin-top-0 float-left">
-                                    <h5>Tekanan Darah<span class="float-right">120/80</span></h5> 
-                                    <p>mmh</p>      
+                                    <h5>Sistole<span class="float-right">{{$rekammedis_mhs->sistole}}</span></h5> 
+                                    <p>mmHG</p>      
                                     <div class="graphic">
                                         <img src="{{url('/images/vec1.png')}}"/>   
                                     </div>                           
                                 </div>
                                 <div class="card-basic  margin-top-0 float-right">
-                                    <h5>Denyut Jantung<span class="float-right">120</span></h5> 
-                                    <p>BPM</p> 
+                                    <h5>Diastole<span class="float-right">{{$rekammedis_mhs->diastole}}</span></h5> 
+                                    <p>mmHG</p> 
                                     <div class="graphic">
                                         <img src="{{url('/images/vec4.png')}}"/>  
                                     </div>  
                                 </div>
                                 <div class="card-basic float-left">
-                                    <h5>Temperatur<span class="float-right">36</span></h5> 
-                                    <p>C</p> 
+                                    <h5>Respirasi<span class="float-right">{{$rekammedis_mhs->respirasi}}</span></h5> 
+                                    <p>spm</p> 
                                     <div class="graphic">
                                     <img src="{{url('/images/vec2.png')}}"/>   
                                     </div>   
                                 </div>
                                 <div class="card-basic float-right">
-                                    <h5>Tekanan Darah<span class="float-right">120/80</span></h5> 
-                                    <p>mmh</p> 
+                                    <h5>Nadi<span class="float-right">{{$rekammedis_mhs->nadi}}</span></h5> 
+                                    <p>BPM</p> 
                                     <div class="graphic">
                                     <img src="{{url('/images/vec3.png')}}"/>  
                                     </div>  
@@ -104,20 +104,32 @@
                             </div>
                             <div class="detail-rekmed">
                                 <div class="info-rekmed padding-top-0">
+                                    <h5>Berat Badan</h5>
+                                    <p>{{$rekammedis_mhs->berat_badan}} Kg</p>
+                                </div>
+                                <div class="info-rekmed">
+                                    <h5>Tinggi Badan</h5>
+                                    <p>{{$rekammedis_mhs->tinggi_badan}} cm</p>
+                                </div>
+                                <div class="info-rekmed">
                                     <h5>Keluhan</h5>
-                                    <p>Lorem ipsum dolor sit amet, contetur adipiscing elit sed do eiusmod. Lorem ipsum dolor sit amet. co adipiscing elit sed do eiusmod tempor. cont adipiscing elit sed do eiusmod tempor. Lorem ipsum dolor sit amet. cont adipiscing elit sed do eiusmod tempor. cont adipiscing elit sed do eiusmod.</p>
+                                    <p>{{$rekammedis_mhs->keluhan}}</p>
                                 </div>
                                 <div class="info-rekmed">
                                     <h5>Diagnosis</h5>
-                                    <p>Lorem ipsum dolor sit amet, contetur adipiscing elit sed do eiusmod.</p>
+                                    <p>{{$rekammedis_mhs->diagnosis}}</p>
                                 </div>
                                 <div class="info-rekmed">
                                     <h5>Pemberian obat</h5>
-                                    <p>Lorem ipsum dolor sit amet. cont adipiscing elit sed do eiusmod tempor. cont adipiscing elit sed do eiusmod tempor. Lorem ipsum dolor sit amet, contetur adipiscing elit sed do eiusmod tempor.</p>
+                                    <p>{{$rekammedis_mhs->apoteker}}</p>
+                                </div>
+                                <div class="info-rekmed">
+                                    <h5>Anamnesa Pemeriksaan Fisik Perawat</h5>
+                                    <p>{{$rekammedis_mhs->anamnesa_pemeriksaan_fisik_perawat}}</p>
                                 </div>
                                 <div class="info-rekmed padding-bot-0">
-                                    <h5>Tindak Lanjut</h5>
-                                    <p>Lorem ipsum dolor sit amet, contetur adipiscing elit sed do eiusmod tempor.</p>
+                                    <h5>Anamnesa Pemeriksaan Dokter</h5>
+                                    <p>{{$rekammedis_mhs->anamnesa_pemeriksaan_dokter}}</p>
                                 </div>
                             </div>
                         </div>
