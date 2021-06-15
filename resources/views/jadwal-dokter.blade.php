@@ -27,37 +27,25 @@
                     <div class="details-content">
                         <table id="tabel-dokter">
                         <tr>
-                            <th>Dokter</th>
+                            <th width='20%'>Dokter</th>
                             <th>Senin</th>
                             <th>Selasa</th>
                             <th>Rabu</th>
                             <th>Kamis</th>
                             <th>Jumat</th>
                         </tr>
+                        @foreach($jadwal_dokter as $jd)
+                        @if($jd->dokter_users->poli=="poliumum")
                         <tr>
-                            <td>Dr. Laszlo Kreizler</td>
-                            <td>08.00-12.00</td>
-                            <td>12.00-16.00</td>
-                            <td>12.00-16.00</td>
-                            <td>12.00-16.00</td>
-                            <td>-</td>
+                            <td>{{$jd->dokter_users->name}}</td>
+                            <td>{{$jd->senin}}</td>
+                            <td>{{$jd->selasa}}</td>
+                            <td>{{$jd->rabu}}</td>
+                            <td>{{$jd->kamis}}</td>
+                            <td>{{$jd->jumat}}</td>
                         </tr>
-                        <tr>
-                            <td>Dr. Kevin swinger</td>
-                            <td>13.00-16.00</td>
-                            <td>12.00-16.00</td>
-                            <td>12.00-16.00</td>
-                            <td>12.00-16.00</td>
-                            <td>12.00-16.00</td>
-                        </tr>
-                        <tr>
-                            <td>Dr. Mory Kenzler</td>
-                            <td>-</td>
-                            <td>12.00-16.00</td>
-                            <td>12.00-16.00</td>
-                            <td>12.00-16.00</td>
-                            <td>12.00-16.00</td>
-                        </tr>
+                        @endif
+                        @endforeach
                         </table>
                     </div>
                     
@@ -66,21 +54,28 @@
                 <details>
                     <summary>Poli Gigi</summary>
                     <div class="details-content">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit eligendi, ab quasi cupiditate temporibus perferendis eaque nemo! Fuga nisi assumenda explicabo nostrum odit voluptas dicta voluptatum nobis accusantium. At, perferendis?</p>
-                    </div>
-                </details>
-
-                <details>
-                    <summary>Poli Gigi</summary>
-                    <div class="details-content">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit eligendi, ab quasi cupiditate temporibus perferendis eaque nemo! Fuga nisi assumenda explicabo nostrum odit voluptas dicta voluptatum nobis accusantium. At, perferendis?</p>
-                    </div>
-                </details>
-
-                <details>
-                    <summary>Poli Gigi</summary>
-                    <div class="details-content">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit eligendi, ab quasi cupiditate temporibus perferendis eaque nemo! Fuga nisi assumenda explicabo nostrum odit voluptas dicta voluptatum nobis accusantium. At, perferendis?</p>
+                    <table id="tabel-dokter">
+                        <tr>
+                            <th width='20%'>Dokter</th>
+                            <th>Senin</th>
+                            <th>Selasa</th>
+                            <th>Rabu</th>
+                            <th>Kamis</th>
+                            <th>Jumat</th>
+                        </tr>
+                        @foreach($jadwal_dokter as $jd)
+                        @if($jd->dokter_users->poli=="poligigi")
+                        <tr>
+                        <td>{{$jd->dokter_users->name}}</td>
+                            <td>{{$jd->senin}}</td>
+                            <td>{{$jd->selasa}}</td>
+                            <td>{{$jd->rabu}}</td>
+                            <td>{{$jd->kamis}}</td>
+                            <td>{{$jd->jumat}}</td>
+                        </tr>
+                        @endif
+                        @endforeach
+                        </table>
                     </div>
                 </details>
             </div>

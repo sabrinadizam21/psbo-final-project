@@ -24,9 +24,12 @@ Route::get('/konsultasi', function () {
 
 
 
-Route::get('/jadwal-dokter', function () {
-    return view('jadwal-dokter');
-});
+//Route::get('/jadwal-dokter', function () {
+//    return view('jadwal-dokter');
+//});
+
+Route::get('/jadwal-dokter', 'JadwalDokterController@daftar_jadwal_dokter');
+
 
 Route::get('/login-mahasiswa', function () {
     return view('login-mahasiswa');
@@ -41,7 +44,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/rekam-medis/{id}', 'RekamMedisController@rekammedis');
 
-Route::get('/rekam-medis/{id}/show', 'RekamMedisController@rekammedisshow');
+Route::get('/rekam-medis/show/{id}', 'RekamMedisController@rekammedisshow');
 
 Route::post('/rekam-medis/create', 'RekamMedisController@rekammediscreate');
 
