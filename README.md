@@ -176,9 +176,10 @@ Penerapan pada sistem :
 ![arsitektur sistem](https://user-images.githubusercontent.com/57716837/122124519-9577ce00-ce59-11eb-9e0e-6d16af6ed734.png)
 
 ### 6. Fungsi Utama yang Dikembangkan
-Fitur-fitur aplikasi SIK-POLI yaitu :
+Fungsi-fungsi utama pada aplikasi SIK-POLI yaitu :
 - **Rekam Medis**  
 Pada fitur **Rekam Medis** mahasiswa dapat melihat data rekam medisnya secara _online_ di SIK-POLI dengan mudah. Informasi yang disampaikan pada fitur **Rekam Medis** meliputi profil pasien, tanggal pemeriksaan, berat badan, tinggi badan, tekanan darah, keluhan, diagnosis, sistole, diastole, respirasi, nadi, dan pemberian obat.  
+
 - **Jadwal Dokter**  
 Pada fitur **Jadwal Dokter** mahasiswa dapat melihat jadwal dokter perharinya beserta jam kerjanya. Fitur ini membantu mahasiswa ketika ingin melakukan kunjungan ke Poliklinik secara langsung sesuai dengan jadwal dokter yang ada.  
 
@@ -202,65 +203,65 @@ Pada fitur **Jadwal Dokter** mahasiswa dapat melihat jadwal dokter perharinya be
 [`^ kembali ke atas ^`](#)
  
 ### 1. Tampilan untuk Mahasiswa  
-**Halaman Welcome**  
+#### - Halaman Welcome  
 
 ![Screenshot (1952)](https://user-images.githubusercontent.com/57716837/122128443-e50cc880-ce5e-11eb-8ab4-4aa7c57cb3a5.png)  
   
-**Form Login**  
+#### - Form Login  
 
 ![Screenshot (1955)](https://user-images.githubusercontent.com/57716837/122128489-f48c1180-ce5e-11eb-9d1e-846187c3ed24.png)  
   
-**Halaman Home**  
+#### - Halaman Home  
 
 ![Screenshot (1956)](https://user-images.githubusercontent.com/57716837/122128506-f950c580-ce5e-11eb-97cf-e44bf912377e.png)  
   
-**Rekam Medis**  
+#### - Rekam Medis  
 
 ![Screenshot (1957)](https://user-images.githubusercontent.com/57716837/122128566-0f5e8600-ce5f-11eb-9edf-a3254b86fd3d.png)  
 ![Screenshot (1958)](https://user-images.githubusercontent.com/57716837/122128568-11284980-ce5f-11eb-814b-a1e4fff3a4df.png)    
   
-**Jadwal Dokter**  
+#### - Jadwal Dokter  
 
 ![Screenshot (1959)](https://user-images.githubusercontent.com/57716837/122128587-1a191b00-ce5f-11eb-9318-3cfbf012f4c9.png)    
 
 ### 2. Tampilan untuk Admin  
-**Halaman Welcome**  
+#### - Halaman Welcome  
 
 ![Screenshot (1953)](https://user-images.githubusercontent.com/57716837/122129106-d2df5a00-ce5f-11eb-944d-977d3cdc1e6c.png)
   
-**Form Login**  
+#### - Form Login  
 
 ![Screenshot (1961)](https://user-images.githubusercontent.com/57716837/122129123-d7a40e00-ce5f-11eb-9c35-c3f7716e7114.png)
   
-**Daftar Jadwal Dokter**  
+#### - Daftar Jadwal Dokter  
 
 ![Screenshot (1962)](https://user-images.githubusercontent.com/57716837/122129138-dbd02b80-ce5f-11eb-9bb4-41e27b532368.png)
   
-**Tambah Jadwal Dokter**  
+#### - Tambah Jadwal Dokter  
 
 ![Screenshot (1963)](https://user-images.githubusercontent.com/57716837/122129151-dffc4900-ce5f-11eb-86f2-8227c394a536.png)
   
-**Edit Jadwal Dokter**  
+#### - Edit Jadwal Dokter  
 
 ![Screenshot (1964)](https://user-images.githubusercontent.com/57716837/122129172-e985b100-ce5f-11eb-9a1d-0366d8b1e48c.png)
   
-**Daftar Mahasiswa**  
+#### - Daftar Mahasiswa  
 
 ![Screenshot (1965)](https://user-images.githubusercontent.com/57716837/122129185-ed193800-ce5f-11eb-8a51-e9eba08a305d.png)
   
-**Tambah Rekam Medis**  
+#### - Tambah Rekam Medis  
 
 ![Screenshot (1966)](https://user-images.githubusercontent.com/57716837/122129202-f4d8dc80-ce5f-11eb-9994-2820df93f9d2.png)
   
-**Daftar Rekam Medis Per Mahasiswa**  
+#### - Daftar Rekam Medis Per Mahasiswa  
 
 ![Screenshot (1967)](https://user-images.githubusercontent.com/57716837/122129221-f99d9080-ce5f-11eb-984e-54b295a8e48b.png)
   
-**Edit Rekam Medis**  
+#### - Edit Rekam Medis Per Mahasiswa  
 
 ![Screenshot (1968)](https://user-images.githubusercontent.com/57716837/122129232-fdc9ae00-ce5f-11eb-94eb-30b465677762.png)
   
-**Detail Rekam Medis**  
+#### - Detail Rekam Medis Per Mahasiswa  
 
 ![Screenshot (1969)](https://user-images.githubusercontent.com/57716837/122129255-0326f880-ce60-11eb-9e9e-0dfb076512b3.png)
 
