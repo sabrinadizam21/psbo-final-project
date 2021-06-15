@@ -88,9 +88,17 @@ class StaffController extends Controller
     	//return view('staff.tambah-rekam-medis');
     }
 
-    public function rekam_medis_edit()
+    public function rekam_medis_edit($id)
     {
-    	return view('staff.edit-rekam-medis');
+    	$rekam_medis = \App\RekamMedis::find($id);
+        return view('staff.edit-rekam-medis', ['rekam_medis' => $rekam_medis]);
+    }
+
+    public function rekam_medis_update(Request $request, $id)
+    {
+        $rekam_medis = \App\RekamMedis::find($id);
+        $rekam_medis->update($request->all());
+        return redirect('/admin/rekam-medis/individu/'.$rekam_medis->user_id);
     }
 
     public function rekam_medis_detail($id)
@@ -108,4 +116,5 @@ class StaffController extends Controller
         $rekammedis->delete();
         return redirect('/admin/rekam-medis')->with('sukses','Rekam Medis Berhasil Dihapus');
     }
+
 }

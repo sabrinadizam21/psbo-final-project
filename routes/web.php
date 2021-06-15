@@ -66,7 +66,8 @@ Route::prefix('admin')->group(function(){
 
 	
 	Route::get('/rekam-medis-delete/{id}', 'StaffController@rekam_medis_delete');
-	Route::get('/rekam-medis-edit', 'StaffController@rekam_medis_edit');
+	Route::get('/rekam-medis-edit/{id}', 'StaffController@rekam_medis_edit');
+	Route::post('/rekam-medis-edit/{id}/update', 'StaffController@rekam_medis_update');
 
 	Route::get('/jadwal-dokter/tambah','StaffController@jadwal_dokter_tambah');
 	Route::post('/jadwal-dokter/create','StaffController@jadwal_dokter_create');

@@ -36,7 +36,7 @@
 							<td>{{$rekammedises->keluhan}}</td>
 							<td>{{$rekammedises->dokter}}</td>
 							<td>
-								<a href="{{url('/admin/rekam-medis-edit')}}" type="button" class="btn btn-warning btn-xs">Edit</a>	
+								<a href="/admin/rekam-medis-edit/{{$rekammedises->id}}" type="button" class="btn btn-warning btn-xs">Edit</a>	
 								<!-- <button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#exampleModal">Edit</button> -->
 								<a href="/admin/rekam-medis-delete/{{$rekammedises->id}}" type="button" class="btn btn-danger btn-xs" onclick="return confirm('Anda yakin ingin menghapus rekam medis ini?')">Hapus</a>
 								<a href="/admin/rekam-medis-detail/{{$rekammedises->id}}" type="button" class="btn btn-primary btn-xs">Lihat</a>									

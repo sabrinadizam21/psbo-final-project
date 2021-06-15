@@ -13,4 +13,9 @@ class JadwalDokter extends Model
     {
     	return $this->belongsTo('\App\Dokter','id_dokter');
     }
+
+    public function dokter()
+    {
+        return $this->hasOne('\App\Dokter');
+    }
 }

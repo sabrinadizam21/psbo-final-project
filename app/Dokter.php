@@ -26,4 +26,9 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
         {
             return $this->belongsTo('\App\JadwalDokter','id_jadwal');
         }
+
+        public function jadwal_rel()
+        {
+            return $this->hasOne('\App\JadwalDokter');
+        }
     }
