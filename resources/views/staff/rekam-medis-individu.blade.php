@@ -38,7 +38,7 @@
 							<td>
 								<a href="{{url('/admin/rekam-medis-edit')}}" type="button" class="btn btn-warning btn-xs">Edit</a>	
 								<!-- <button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#exampleModal">Edit</button> -->
-								<button type="button" class="btn btn-danger btn-xs">Hapus</button>
+								<a href="/admin/rekam-medis-delete/{{$rekammedises->id}}" type="button" class="btn btn-danger btn-xs" onclick="return confirm('Anda yakin ingin menghapus rekam medis ini?')">Hapus</a>
 								<a href="/admin/rekam-medis-detail/{{$rekammedises->id}}" type="button" class="btn btn-primary btn-xs">Lihat</a>									
 							</td>
 						</tr>

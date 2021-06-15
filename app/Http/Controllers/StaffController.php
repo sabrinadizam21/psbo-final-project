@@ -101,4 +101,11 @@ class StaffController extends Controller
         return view('staff/detail-rekam-medis', ['rekam_medis' => $rekammedis]);
         // return view('staff.detail-rekam-medis');
     }
+
+    public function rekam_medis_delete($id)
+    {
+        $rekammedis = \App\RekamMedis::find($id);
+        $rekammedis->delete();
+        return redirect('/admin/rekam-medis')->with('sukses','Rekam Medis Berhasil Dihapus');
+    }
 }
