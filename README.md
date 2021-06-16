@@ -2,17 +2,14 @@
   <a href="">
     
   </a>
-
-  <h3 align="center">SIK-POLI</h3>
-
   <p align="center">
-    <b>Sistem Informasi Rekam Medis dan Konsultasi pada Poliklinik IPB</br>
-    (Paralel 1 Kelompok 9)</b> 
+      <h1 align="center"><img src="https://github.com/syukriyatulhanifa/testchat/blob/master/uploadgambar/doctor_medicine_theme-02-%201.png"></h1>
+      <h2 align="center">Sistem Informasi Rekam Medis dan Konsultasi pada Poliklinik IPB</br>
+    (Paralel 1 Kelompok 9)</h2>
     <br>
     <br>
-    <br>
-    <img scr="https://user-images.githubusercontent.com/60166588/122167862-c1b93c00-cea5-11eb-9ac9-a2d40f5d6e8f.png)">
   </p>  
+  
 </p>
 
 <table align="center">
@@ -29,6 +26,7 @@
 <th align="center"><a href="#i-developer-dan-job-desc">Developer</a></th>
 </tr>
 </thead>
+    
 </table align="center">
 
 ### **Link Trello & Figma**
@@ -270,6 +268,9 @@ Pada fitur **Jadwal Dokter** mahasiswa dapat melihat jadwal dokter perharinya be
 [`^ kembali ke atas ^`](#)
 
 Sarannya...
+1. Untuk pengembangan selanjutnya disarankan menggunakan API
+2. Diharapkan website yang telah dikembangkan memiliki tampilan yang lebih responsive dan interactive
+3. Pengembangan lebih lanjut pada fitur konsultasi
 
 ## I. Developer dan Job Desc
 [`^ kembali ke atas ^`](#)
