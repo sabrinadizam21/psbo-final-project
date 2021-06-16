@@ -7,7 +7,6 @@
       <h2 align="center">Sistem Informasi Rekam Medis dan Konsultasi pada Poliklinik IPB</br>
     (Paralel 1 Kelompok 9)</h2>
     <br>
-    <br>
   </p>  
   
 </p>
@@ -59,9 +58,9 @@ SIK-POLI merupakan aplikasi untuk Poliklinik IPB berbasis _website_ yang bertuju
 ![Software](https://user-images.githubusercontent.com/57716837/122116041-52b0f880-ce4f-11eb-9ee6-dd32a7dc5558.png)  
 
 ### 2. Hardware
-- Processor : 
-- Memory : 
-- VGA : 
+- Processor : Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz
+- Memory : 8,00 GB
+- VGA : Nvidia GTX 1050Ti GeForce
 
 ### 3. Tech Stack
 ![techstack](https://user-images.githubusercontent.com/57716837/122115778-05cd2200-ce4f-11eb-8b28-2db4e4c79e10.png)  
@@ -155,21 +154,25 @@ Penerapan pada sistem :
 ![Diagram Kelompok 9-Use Case](https://user-images.githubusercontent.com/60166588/121620205-1ae33300-ca94-11eb-8092-3a97bb74a0ad.png)
 
 ### 2. Activity Diagram
+#### a. Mahasiswa
 #### - Melihat Rekam Medis atau Jadwal Dokter
 ![Diagram Kelompok 9-AD 1 - melihat rekam medis](https://user-images.githubusercontent.com/60166588/121620404-77dee900-ca94-11eb-8d2f-30ff19fabc53.png)
+
+#### b. Admin
 #### - Menambah Jadwal Dokter
 ![Diagram Kelompok 9-AD 2 - menambah jadwal](https://user-images.githubusercontent.com/60166588/121620518-aeb4ff00-ca94-11eb-836e-d3012f82ad93.png)
-#### - Menghapus Jadwal Dokter
-![Diagram Kelompok 9-AD 3 - menghapus jadwal](https://user-images.githubusercontent.com/60166588/121620630-de640700-ca94-11eb-8840-c0037ec47985.png)
 #### - Mengupdate Jadwal Dokter
 ![Diagram Kelompok 9-AD 4 - mengubah jadwal](https://user-images.githubusercontent.com/60166588/121620705-fc316c00-ca94-11eb-8a6d-23cdbadae2da.png)
 #### - Mengupdate Rekam Medis
 ![update rekam medis](https://user-images.githubusercontent.com/60166588/121625901-9518b500-ca9e-11eb-90b0-2d1c6cb16183.png)
+#### - Menghapus Jadwal Dokter
+![Diagram Kelompok 9-AD 3 - menghapus jadwal](https://user-images.githubusercontent.com/60166588/121620630-de640700-ca94-11eb-8840-c0037ec47985.png)
 
 ### 3. Class Diagram
-![class diagram](https://user-images.githubusercontent.com/60166588/121625989-c1cccc80-ca9e-11eb-95be-12a12c0d4d8a.png)
+![class](https://user-images.githubusercontent.com/57716837/122177645-04801180-ceb0-11eb-82b3-a72f58f0e78a.png) 
 
 ### 4. Entity Relationship Diagram
+![erd](https://user-images.githubusercontent.com/57716837/122177681-0ba71f80-ceb0-11eb-8f8c-71d59203550f.png)  
 
 ### 5. Arsitektur Sistem
 ![arsitektur sistem](https://user-images.githubusercontent.com/57716837/122124519-9577ce00-ce59-11eb-9e0e-6d16af6ed734.png)
@@ -184,6 +187,7 @@ Pada fitur **Jadwal Dokter** mahasiswa dapat melihat jadwal dokter perharinya be
 
 ### 7. Fungsi CRUD
 **a. Create**  
+- Admin dapat memasukkan data rekam medis milik mahasiswa
 - Admin dapat membuat jadwal dokter yang baru sesuai dengan jam kegiatan dokternya yang terdiri dari hari dan jam kerjanya  
 
 **b. Read**  
@@ -267,21 +271,21 @@ Pada fitur **Jadwal Dokter** mahasiswa dapat melihat jadwal dokter perharinya be
 ## H. Saran untuk Pengembangan Selanjutnya
 [`^ kembali ke atas ^`](#)
 
-Sarannya...
-1. Untuk pengembangan selanjutnya disarankan menggunakan API
-2. Diharapkan website yang telah dikembangkan memiliki tampilan yang lebih responsive dan interactive
-3. Pengembangan lebih lanjut pada fitur konsultasi
+Saran untuk pengembangan aplikasi SIK-POLI selanjutnya, diantaranya :
+1. Disarankan menggunakan API
+2. Diharapkan website yang telah dikembangkan memiliki tampilan yang lebih _responsive_ dan _interactive_
+3. Pengembangan lebih lanjut adanya fitur konsultasi
 
 ## I. Developer dan Job Desc
 [`^ kembali ke atas ^`](#)
 
-| NIM       | NAMA                          | JOB DESC  |
-| --------- | ----------------------------- | --------- |
-| G64180029 | Sabrina Diza Melinda          |           |
-| G64180030 | Zahra Aulia Firdausi          |           |
-| G64180053 | Putri Melanita Londong Bua    |           |
-| G64180062 | Syukriyatul Hanifa            |           |
-| G64180077 | Alwi Miftahul Karomi          |           |
+| NIM       | NAMA                          | JOB DESC                  |
+| --------- | ----------------------------- | ------------------------- |
+| G64180029 | Sabrina Diza Melinda          | Front-End, Back-End       |
+| G64180030 | Zahra Aulia Firdausi          | Project Manager, Back-End |
+| G64180053 | Putri Melanita Londong Bua    | System Analyst            |
+| G64180062 | Syukriyatul Hanifa            | UI/UX Designer, Front-End |
+| G64180077 | Alwi Miftahul Karomi          | Front-End                 |
 
 
 
